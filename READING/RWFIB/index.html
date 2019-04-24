@@ -40,10 +40,11 @@
 					var n = value.question.indexOf("<select>");
 					var desc = value.question.substring(0, n);
 					desc = desc.substring(0, 100); // max 100
-					
+
 					optionClass = "";
 					if (visited.includes(value.id)) optionClass = "visited";
-					$('#samples').append('<option value="' + index + '" class="' + optionClass + '">[' + value.id +
+					$('#samples').append('<option value="' + index + '" class="' + optionClass +
+						'">[' + value.id +
 						'] ' + desc + ' ...</option>');
 
 					//$('#samples').append('<option value="' + index + '">[' + value.id + '] ' + desc + ' ...</option>');
@@ -76,7 +77,8 @@
 					$("select .correct").css('background-color', 'green');
 
 					$("#question").find("select").each(function (index) {
-						if ($(this).children("option:selected").val() == 0) $(this).css('background-color', 'red');
+						if ($(this).children("option:selected").val() == 0) $(this).css(
+							'background-color', 'red');
 						else {
 							$(this).css('background-color', 'green');
 							score++;
@@ -98,23 +100,25 @@
 						$("#answers").attr('class', 'alert alert-danger');
 					}
 
-					userScoreMsg = ' Your score = ' + score + ' out of ' + optionsCount + ' in ' + $("#timer").text() +
+					userScoreMsg = ' Your score = ' + score + ' out of ' + optionsCount + ' in ' + $("#timer")
+						.text() +
 						' ' + smile;
 					$("#answers").html(userScoreMsg);
 					$("#answers").show();
 				}
 
 				function item_visited(id, visitedQuiz) {
-				if (!visited.includes(id)) {
-					visited.push(id);
-					visited.sort();
-					localStorage.setItem(visitedQuiz, JSON.stringify(visited))
-					//alert(id +" >>>>> " +JSON.stringify(visited));
+					if (!visited.includes(id)) {
+						visited.push(id);
+						visited.sort();
+						localStorage.setItem(visitedQuiz, JSON.stringify(visited))
+						//alert(id +" >>>>> " +JSON.stringify(visited));
+					}
 				}
-			}
 			});
 
 			function loadQuestion(QIndex) {
+				var id = qArray[QIndex].id;
 				var question = qArray[QIndex].question;
 				var answersArr = qArray[QIndex].answers;
 				var optionsArr = qArray[QIndex].options;
@@ -128,7 +132,8 @@
 					//generate answers ul 
 					answersUL += '<li class="list-group-item">' + answersArr[i] + '</li>';
 					//generate answers spans 
-					answersSpans[i] = '<span class="badge badge-success answer-hint" style="display:none;" >' + answersArr[i] +
+					answersSpans[i] = '<span class="badge badge-success answer-hint" style="display:none;" >' +
+						answersArr[i] +
 						'</span>';
 				}
 				answersUL = ' <ul class="list-group list-group-horizontal">' + answersUL + '</ul>';
@@ -137,8 +142,10 @@
 				for (var i = 0; i < optionsArr.length; i++) {
 					var optionsStr = '<option value="0"></option>';
 					for (var j = 0; j < optionsArr[i].length; j++) {
-						optionsStr += '<option value="' + optionsArr[i][j][1] + '" class="' + optionStyleClass[optionsArr[i][j][
-							1]] + '">' + optionsArr[i][j][0] + '</option>';
+						optionsStr += '<option value="' + optionsArr[i][j][1] + '" class="' + optionStyleClass[
+							optionsArr[i][j][
+								1
+							]] + '">' + optionsArr[i][j][0] + '</option>';
 					}
 					optionsStrArr[i] = optionsStr;
 				}
@@ -159,7 +166,12 @@
 				item_visited(id, localStorageVariableName);
 
 				//refresh style for visited options 
-				$(".visited").css({'margin': '40px','background-color': 'rgb(225, 0, 255)', 'color': '#fff','text-shadow': '0 1px 0 rgba(0, 0, 0, 0.4)'	});
+				$(".visited").css({
+					'margin': '40px',
+					'background-color': 'rgb(225, 0, 255)',
+					'color': '#fff',
+					'text-shadow': '0 1px 0 rgba(0, 0, 0, 0.4)'
+				});
 
 
 			}
@@ -177,7 +189,8 @@
 			$("#next").click(function () {
 				var nextElement = $('#samples > option:selected').next('option');
 				if (nextElement.length > 0) {
-					$('#samples > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
+					$('#samples > option:selected').removeAttr('selected').next('option').attr('selected',
+						'selected');
 					$('#samples').trigger('change');
 				}
 
@@ -186,7 +199,8 @@
 			$("#prev").click(function () {
 				var nextElement = $('#samples > option:selected').prev('option');
 				if (nextElement.length > 0) {
-					$('#samples > option:selected').removeAttr('selected').prev('option').attr('selected', 'selected');
+					$('#samples > option:selected').removeAttr('selected').prev('option').attr('selected',
+						'selected');
 					$('#samples').trigger('change');
 				}
 			});
