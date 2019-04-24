@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://ferrycode.github.io/PTE/js/timer.jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script src="../../js/jdropwords.js"></script>
+<link type="text/css" rel="stylesheet" href="../../css/jdropwords.css" media="all" />
+
+<script>
+		var answersJsonObj;
+		
+         $(document).ready(function() { 
+			var jsonURL = "data.json";
+			var options = "";
+			var myArray ;
+			var userScoreMsg =""; 
+			var answersArr = [];
+			
+			//Consruct the select  menu
+			$.getJSON(jsonURL, function (data) {
+				myArray = data;				
+				var repeat_ids=[];			
+					$.each(data, function (index, value) {					
+					var exists_name_len = $.map(myArray, function(n, i) {
+					if(getDesc(n.question)==getDesc(value.question))
+						{ return i; }
+						}).length;
+				    if(exists_name_len>1){repeat_ids.push(value.Id);}					
+				});	
+			console.log(repeat_ids);
+				
+			});
+
+		});			
+			
+			function getDesc(str){
+					var n = str.indexOf("<span");
+					var desc = str.substring(0, n);
+					desc = desc.substring(0, 100); // max 100				
+					return desc
+			
+			}
+		
+		 </script>
+	
+
+<title>PTE Quiz</title>
+</head>
+<body>
+	
+</body>
+</html>

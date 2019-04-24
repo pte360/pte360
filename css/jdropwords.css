@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+/* PLACE BELOW IN COURSE TO CONTROL IFRAME */
+/*
+.responsiveIframe-component .responsiveIframe-iframe {
+    height: 100% !important;
+}
+.responsiveIframe-component .responsiveIframe-iframe-holder {
+    padding-bottom: 80%;
+}
+@media all and (max-width:980px){
+.responsiveIframe-component .responsiveIframe-iframe-holder {padding-bottom: 90%;}
+}
+@media (max-width: 800px) {
+.responsiveIframe-component .responsiveIframe-iframe-holder {padding-bottom: 120%;}
+}
+@media all and (max-width:@device-width-medium){
+ .responsiveIframe-component .responsiveIframe-iframe-holder {padding-bottom: 150%;}
+}
+@media all and (max-width:@device-width-small){
+ .responsiveIframe-component .responsiveIframe-iframe-holder {padding-bottom: 300%;}
+}
+*/
+
+.jdropwords {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    font-size: 16px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.jdropwords .blanks {
+    position: relative;
+    padding: 20px;
+}
+.jdropwords .blanks p {
+    margin-bottom: 5px;
+}
+.jdropwords .blanks p .blank {
+    display: inline-block;
+    width: 100px;
+    min-width: 100px;
+    height: 20px;
+    padding: 2px;
+    border-bottom: 1px solid #000000;
+}
+.jdropwords .blanks p .blank.active {
+    border-bottom: 0;
+    padding-top: 4px;
+    width: auto !important;
+    min-width: 0;
+}
+.jdropwords .blanks p .blank {
+    width: auto !important;
+}
+.jdropwords .blanks p .blank.active .dropped{
+    position: relative;
+    top: 5px;
+    --font-family: 'Germania One', cursive;
+    --font-size: 32px;
+}
+.jdropwords .blanks p .blank.drop-hover {
+    border-color: orange;
+}
+.jdropwords .blanks p .blank.error {
+    border-color: red;
+}
+.jdropwords .blanks p .blank.error .dropped {
+    background-color: red;
+}
+.jdropwords .blanks p .blank.success .dropped{
+    background-color: green;
+}
+
+.jdropwords .words {
+    position: relative;
+    padding: 0px 20%;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    min-height: 335px;
+    display: block;
+    vertical-align: middle;
+    padding-top: 7%;
+    margin-bottom: -12%;
+}/*
+.jdropwords .words .word,
+.jdropwords .blanks p .dropped {
+    background-color: transparent;
+    border-color: transparent;
+    color: #000000;
+    display: inline-block;
+    border-radius: 10px;
+    --font-family: 'Germania One', cursive;
+    --font-size: 32px;
+    --vertical-align: text-bottom;
+}*/
+.jdropwords .words .word,
+.jdropwords .blanks p .dropped {
+	
+    display: inline-block;
+    border-radius: 10px;
+  
+    --vertical-align: text-bottom;
+}
+
+.jdropwords .words .word {
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.jdropwords .blanks p .dropped span,
+.jdropwords .blanks p .dropped .action {
+    display: block;
+    float: left;
+}
+.jdropwords .blanks p .dropped span {
+    padding: 3px 5px 3px 10px;
+}
+.jdropwords .blanks p .dropped .action {
+    padding: 1px 7px 3px 6px;
+    border-left: 1px solid #ccc;
+}
+/*
+.jdropwords .blanks p .dropped .action > a {
+    display: inline-block;
+    color: #990000;
+    font-size: 32px;
+    text-decoration: none;
+    font-family: 'Germania One', cursive;
+}
+.jdropwords .feedback .scoretext {
+    text-align: center;
+    font-size: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    font-family: 'Germania One', cursive;
+}
+*/
+.jdropwords .feedback {
+    border-bottom: 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.jdropwords .feedback .score {
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+canvas#score-canvas {
+    background-color: #FFF;
+    border-radius: 50px;
+}
+
+.jdropwords .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+/*
+.jdropwords .actions {
+    text-align: center;
+}
+
+.jdropwords .actions a.button {
+    font-size:16px;
+    font-family:Arial;
+    font-weight:normal;
+    padding:0px;
+    margin: 0px;
+    text-decoration:none;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.jdropwords .actions a.button.reset {
+    background: url(../img/Fund1_IN_shieldReset_v1.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    border: 0px solid transparent !important;
+    color: transparent !important;
+}
+.jdropwords .actions a.button.reset:hover {
+    background: url(../img/Fund1_IN_shieldResetRoll_v1.png) !important;
+}
+.jdropwords .actions a.button.submit {
+    background: url(../img/Fund1_IN_shieldSubmit_v1.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    border: 0px solid transparent !important;
+    color: transparent !important;
+}
+.jdropwords .actions a.button.submit:hover {
+    background: url(../img/Fund1_IN_shieldSubmitRoll_v1.png) !important;
+}
+*/
+.jdropwords .clearfix:before,
+.jdropwords .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.jdropwords .clearfix:after {
+    clear: both;
+}
+
+.jdropwords .clearfix {
+    *zoom: 1;
+}
+@media all and (max-width:1024px){
+  .jdropwords {font-size: 14px;}
+  .jdropwords .words .word, .jdropwords .blanks p .dropped, .jdropwords .blanks p .blank.active .dropped, .jdropwords .blanks p .dropped .action > a {font-size: 24px;}
+  .jdropwords .words { margin-bottom: -22%;}
+}
+@media all and (max-width:880px){
+  .jdropwords {font-size: 11px;}
+  .jdropwords .words .word, .jdropwords .blanks p .dropped, .jdropwords .blanks p .blank.active .dropped, .jdropwords .blanks p .dropped .action > a {font-size: 16px;}
+  .jdropwords .words { margin-bottom: -32%;}
+}
+@media all and (max-width:680px){
+  .jdropwords .words { margin-bottom: inherit;}
+  .jdropwords .words {background: none; padding-top: 0px; padding: 0px; min-height: inherit;}
+}
+

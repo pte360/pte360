@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://ferrycode.github.io/PTE/js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://ferrycode.github.io/PTE/js/timer.jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+         $(document).ready(function() { 
+			var jsonURL = "https://ferrycode.github.io/PTE/READING/RWFIB/data.json";
+			var options = "";
+			var qArray ;
+			var userScoreMsg =""; 
+			
+			//Consruct the select  menu
+			$.getJSON(jsonURL, function (data) {
+				qArray = data;
+				$.each(data, function (index, value) {
+					// APPEND OR INSERT DATA TO SELECT ELEMENT.
+					var n = value.question.indexOf("<select>");
+					var desc = value.question.substring(0, n);
+					desc = desc.substring(0, 100); // max 100
+					$('#samples').append('<option value="' + index+ '">[' +value.id + '] '+desc+' ...</option>');
+				});
+				loadQuestion(0); // initially load first question 
+			});	
+			
+			// SHOW ANSWERS 
+            $("#show_answer").click(function(event){
+				//$("answer-hint").show();   
+				if($('.answer-hint:visible').length){
+					$('.answer-hint').hide();
+					$("#answers").html('');
+					$("#answers").hide();
+					$("select option").css({"background-color": "white"});
+					$('#show_answer').text('SHOW ANSWERS');
+					$("#question").find("select").each(function(index) {
+						$(this).css('background-color', 'transparent');
+						$(this).children("option").css('background-color', 'transparent');										
+					});
+				}
+				else{
+					var score = 0 ; 
+					var optionsCount = 0;
+					
+					$('#show_answer').text('HIDE ANSWERS');
+					$('.answer-hint').show();     
+					$("select .wrong").css('background-color', 'red');
+					$("select .correct").css('background-color', 'green');
+					 
+					$("#question").find("select").each(function(index) {
+						if ($(this).children("option:selected").val()==0) $(this).css('background-color', 'red');
+						else {$(this).css('background-color', 'green'); score++ ; }
+						
+						optionsCount++; 					
+					}); //end loop selects 
+					var smile = ":)";
+					var scorePcnt = Math.round(((score*10)/optionsCount));
+					
+					if(scorePcnt >= 5) {smile = ", Very Good  :)"; $("#answers").attr('class', 'alert alert-success'); }
+					else if (scorePcnt < 5 && scorePcnt > 0) {smile = ", Good but do better  :|"; $("#answers").attr('class', 'alert alert-warning');}
+					else {smile = ", Be ready next time  :("; $("#answers").attr('class', 'alert alert-danger');}
+					
+					userScoreMsg = ' Your score = '+score+ ' out of '+ optionsCount + ' in ' + $("#timer").text() + ' '+smile; 
+					$("#answers").html(userScoreMsg);
+					$("#answers").show();
+				}
+            });
+
+			function loadQuestion(QIndex){
+				var question = qArray[QIndex].question ;
+				var answersArr = qArray[QIndex].answers ;
+				var optionsArr = qArray[QIndex].options ;
+				var optionsStrArr = [];
+				var answersUL = "";
+				var answersSpans = []; 
+				var optionStyleClass = ["wrong","correct"];
+								
+				//generate answers 
+				for(var i= 0 ; i < answersArr.length ;  i++ ){
+					//generate answers ul 
+					answersUL += '<li class="list-group-item">' + answersArr[i] + '</li>';					
+					//generate answers spans 
+					answersSpans[i] = '<span class="badge badge-success answer-hint" style="display:none;" >'+answersArr[i]+'</span>';
+				}
+				answersUL = ' <ul class="list-group list-group-horizontal">' + answersUL + '</ul>';
+				
+				//add options 
+				for(var i= 0 ; i < optionsArr.length ;  i++ ){				
+					var optionsStr ='<option value="0"></option>' ;
+					for(var j= 0 ; j < optionsArr[i].length ;  j++ ){
+						optionsStr+= '<option value="' + optionsArr[i][j][1]+ '" class="'+optionStyleClass[optionsArr[i][j][1]]+'">' + optionsArr[i][j][0] + '</option>';
+					}					
+					optionsStrArr[i] = optionsStr;				
+				}
+				
+				// inject HTML content 		
+				$("#question").html(question);	// inject the question, not yet option or correct answer spans 
+				//$("#answers").html(answersUL);	//inject correct answers UL 			
+				$("#question").find("select").each(function(index) {
+					$(this).html(optionsStrArr[index]); //inject options 
+					$(this).after(answersSpans[index]);	//inject correct answer span 			
+				}); //end loop selects 
+				
+				//reset timer 
+				$('#timer').timer('remove');
+				$('#timer').timer();
+			
+			}
+			// SHOW SELECTED VALUE.
+			$('#samples').change(function () {
+				//alert(index);
+				var questionIndex = this.options[this.selectedIndex].index ;
+				
+				loadQuestion (questionIndex);
+				
+				$("#answers").html('');
+				$("#answers").hide();
+			});
+
+			$("#next").click(function() {
+			  var nextElement = $('#samples > option:selected').next('option');
+			  if (nextElement.length > 0) {
+				$('#samples > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
+				$('#samples').trigger('change');
+			  }
+			  
+			});
+
+			$("#prev").click(function() {
+			  var nextElement = $('#samples > option:selected').prev('option');
+			  if (nextElement.length > 0) {
+				$('#samples > option:selected').removeAttr('selected').prev('option').attr('selected', 'selected');
+				$('#samples').trigger('change');
+			  }
+			});
+			
+			
+			
+         });
+		 /*class="collapse" data-toggle="collapse" href="#answersTab" role="button" aria-expanded="false" aria-controls="answersTab"*/
+
+		 
+		 </script>
+<style>
+	
+	
+	#answers{display: none;}
+	
+	option .wrong={background-color:red!important; }
+	option .correct={background-color:green!important; }
+</style>
+<title>PTE Quiz</title>
+</head>
+<body>
+	<div class="container">
+	  <div class="row">
+		<div class="col-sm-12">
+			<span class="align-middle"><h2> PTE | READING |  Read & Write Fill In The Blank </h2></span>			
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<div class="alert alert-info" role="alert">
+			  Please select or navigate to question ... 
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm">
+		 <form>
+			 <div class="form-row">
+				<div class="col-sm-1">
+				  <button  id="prev" type="button" class="btn btn-outline-dark"><< Prev</button>
+				</div>
+				<div class="col-sm-9">	
+				 <select id="samples" class="form-control"></select>
+				</div>
+				<div class="col-sm-2 text-right">
+				  <button  id="next" type="button" class="btn btn-outline-dark">Next >></button>
+				</div>
+			  </div>	
+			</form>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-10">
+			
+		</div>
+		<div class="col-sm-2 text-center border-left border-danger">
+			<h3 class="" id="timer"><h3>
+		</div>
+		<br>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12 border border-warning">
+			<span class=" " id="question"> </span>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<br>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<a id="show_answer" class="btn btn-success" > SHOW ANSWERS </a>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			
+		</div>
+	  </div>
+	  <div class="row">
+	  <div class="col-sm-12">
+		<div id="answersTab"  >
+		  <div id="answers" class="alert alert-success"></div> 
+		</div>
+	  </div>
+	  </div>
+	</div>	
+</body>
+</html>

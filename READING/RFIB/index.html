@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://ferrycode.github.io/PTE/js/timer.jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script src="../../js/jdropwords.js"></script>
+<link type="text/css" rel="stylesheet" href="../../css/jdropwords.css" media="all" />
+
+<script>
+		var answersJsonObj;
+		
+         $(document).ready(function() { 
+			var jsonURL = "data.json";
+			var options = "";
+			var qArray ;
+			var userScoreMsg =""; 
+			var answersArr = [];
+			
+			//Consruct the select  menu
+			$.getJSON(jsonURL, function (data) {
+				qArray = data;
+				$.each(data, function (index, value) {
+					// APPEND OR INSERT DATA TO SELECT ELEMENT.
+					var n = value.question.indexOf("<span");
+					var desc = value.question.substring(0, n);
+					desc = desc.substring(0, 100); // max 100
+					$('#samples').append('<option value="' + index+ '">[' +value.id + '] '+desc+' ...</option>');
+				});
+				loadQuestion(0); // initially load first question 
+			});	
+			
+			// SHOW ANSWERS 
+            $("#show_answer").click(function(event){
+				//$("answer-hint").show();   
+				if($('.answer-hint:visible').length){
+					$('.answer-hint').hide();
+					$("#answers").html('');
+					$("#answers").hide();
+					
+					$('#show_answer').text('SHOW ANSWERS');
+					
+				}
+				else{
+					var score = 0 ; 
+					var optionsCount = 0;
+					
+					$('#show_answer').text('HIDE ANSWERS');
+					$('.answer-hint').show();     
+				
+					 
+					$("#question").find(".blank").each(function(index) {
+						var $span = $(this).find("div span");
+						var blankUserAnswer = $span.text();
+						if (blankUserAnswer == answersArr[index]) {$span.css('background-color', 'green'); score++ ; } 
+						else {$span.css('background-color', 'red');}
+						
+						//alert($(this).find("div span").text())
+						optionsCount++; 					
+					}); //end loop selects 
+					var smile = ":)";
+					var scorePcnt = Math.round(((score*10)/optionsCount));
+					
+					if(scorePcnt >= 5) {smile = ", Very Good  :)"; $("#answers").attr('class', 'alert alert-success'); }
+					else if (scorePcnt < 5 && scorePcnt > 0) {smile = ", Good but do better  :|"; $("#answers").attr('class', 'alert alert-warning');}
+					else {smile = ", Be ready next time  :("; $("#answers").attr('class', 'alert alert-danger');}
+					
+					userScoreMsg = ' Your score = '+score+ ' out of '+ optionsCount + ' in ' + $("#timer").text() + ' '+smile; 
+					$("#answers").html(userScoreMsg);
+					$("#answers").show();
+				}
+            });
+
+			function loadQuestion(QIndex){
+				var question = qArray[QIndex].question ;
+				answersArr = qArray[QIndex].answers ;
+				var optionsArr = qArray[QIndex].options ;
+				var optionsStrArr = [];
+				var optionsUL = "";
+				var answersSpans = []; 
+				var optionStyleClass = ["wrong","correct"];
+				var answersUL = "";
+								
+				//generate options 
+				for(var i= 0 ; i < optionsArr.length ;  i++ ){
+					//generate answers ul 
+					var _id = btoa(optionsArr[i]);
+					optionsUL += '<li id="'+_id+'" class="word ui-draggable ui-draggable-handle" style="position: relative;">' + optionsArr[i] + '</li>';					
+			
+				}
+				//optionsUL = ' <ul class="list-group list-group-horizontal">' + answersUL + '</ul>';
+				
+				//generate answer span 
+				for(var i= 0 ; i < answersArr.length ;  i++ ){
+					//generate answers ul 
+					answersUL += '<li class="list-group-item">' + answersArr[i] + '</li>';				
+					//generate answers spans 
+					answersSpans[i] = '<span class="answer-hint badge badge-success" style="display:none;"  >'+answersArr[i]+'</span>';						
+				}
+			    answersUL = ' <ul class="list-group list-group-horizontal">' + answersUL + '</ul>';
+
+				
+				// inject HTML content 		
+				$("#answers").html(answersUL);	//inject correct answers UL 		
+				$("#question").html(question);	// inject the question, not yet option or correct answer spans 
+				$(".words").html(optionsUL);	//inject correct answers UL 			
+				$("#question").find("span").each(function(index) {
+					$(this).attr('class','blank ui-droppable');
+					$(this).attr('style','width: 118px');
+					$(this).attr('id','b' + (index+1));
+					$(this).after(answersSpans[index]);	//inject correct answer span 			
+				}); //end loop 
+				
+				//reset timer 
+				$('#timer').timer('remove');
+				$('#timer').timer();
+				
+				// generate answers json object 
+				answersJsonObj = {};
+				for (var i = 0 ; i < answersArr.length; i++) {
+					var _id = btoa(answersArr[i]);
+					answersJsonObj["b" + (i+1)] = _id; // be sure all blanks ids are b1, b2, b3, ..... 
+				}
+				//alert(JSON.stringify(answersJsonObj));
+				// init jDropWords 
+				$(function(){				
+					$('.jdropwords').jDropWords({
+					answers : answersJsonObj 
+				});
+			});
+			}
+			// SHOW SELECTED VALUE.
+			$('#samples').change(function () {
+				//alert(index);
+				var questionIndex = this.options[this.selectedIndex].index ;
+				
+				loadQuestion (questionIndex);
+				
+				$("#answers").html('');
+				$("#answers").hide();
+			});
+
+			$("#next").click(function() {
+			  var nextElement = $('#samples > option:selected').next('option');
+			  if (nextElement.length > 0) {
+				$('#samples > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
+				$('#samples').trigger('change');
+			  }
+			  
+			});
+
+			$("#prev").click(function() {
+			  var nextElement = $('#samples > option:selected').prev('option');
+			  if (nextElement.length > 0) {
+				$('#samples > option:selected').removeAttr('selected').prev('option').attr('selected', 'selected');
+				$('#samples').trigger('change');
+			  }
+			});
+			
+			
+			//alert(JSON.stringify(answersJsonObj));
+			// init jDropWords 
+			
+			//////////////
+			
+         });
+		 /*class="collapse" data-toggle="collapse" href="#answersTab" role="button" aria-expanded="false" aria-controls="answersTab"*/
+
+		 
+		 </script>
+		 <script>
+		
+		</script>
+<style>
+	
+	
+	#answers{display: none;}
+	.answer-hint {display: none;}
+	
+	option .wrong={background-color:red!important; }
+	option .correct={background-color:green!important; }
+</style>
+<title>PTE Quiz</title>
+</head>
+<body>
+	<div class="container">
+	  <div class="row">
+		<div class="col-sm-12">
+			<span class="align-middle"><h2> PTE | READING |  Read Fill In The Blank </h2></span>			
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<div class="alert alert-info" role="alert">
+			  Please select or navigate to question ... 
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm">
+		 <form>
+			 <div class="form-row">
+				<div class="col-sm-1">
+				  <button  id="prev" type="button" class="btn btn-outline-dark"><< Prev</button>
+				</div>
+				<div class="col-sm-9">	
+				 <select id="samples" class="form-control"></select>
+				</div>
+				<div class="col-sm-2 text-right">
+				  <button  id="next" type="button" class="btn btn-outline-dark">Next >></button>
+				</div>
+			  </div>	
+			</form>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-10">
+			
+		</div>
+		<div class="col-sm-2 text-center border-left border-danger">
+			<h3 class="" id="timer"><h3>
+		</div>
+		<br>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12 border border-warning">
+			<div class="jdropwords">
+				<div class="blanks">
+					<p id="question"></p>
+				</div>
+				<ul class="words">
+				</ul>
+				
+			</div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<br>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			<a id="show_answer" class="btn btn-success" > SHOW ANSWERS </a>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+			
+		</div>
+	  </div>
+	  <div class="row">
+	  <div class="col-sm-12">
+		<div id="answersTab"  >
+		  <div id="answers" class="alert alert-success"></div> 
+		</div>
+	  </div>
+	  </div>
+	</div>	
+</body>
+</html>

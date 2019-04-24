@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+         $(document).ready(function() { 
+			var jsonURL = "PTEStudyRWFIB.json";
+			var options = "";
+			var qArray ;
+			
+			//Consruct the select  menu
+			$.getJSON(jsonURL, function (data) {
+				qArray = data;
+				$.each(data, function (index, value) {
+					// APPEND OR INSERT DATA TO SELECT ELEMENT.
+					var n = value.question.indexOf("<select>");
+					var desc = value.question.substring(0, n);
+					desc = desc.substring(0, 100); // max 100
+					$('#samples').append('<option value="' + index+ '">[' +value.id + '] '+desc+' ...</option>');
+				});
+				loadQuestion(0); // initially load first question 
+			});	
+			
+			// SHOW ANSWERS 
+            $("#show_answer").click(function(event){
+				//$("span").show();   
+				if($('span:visible').length){
+					$('span').hide();
+					$("select option").css({"background-color": "white"});
+					}
+				else{
+					$('span').show();     
+					$("select .wrong").css('background-color', 'red');
+					$("select .correct").css('background-color', 'green');
+					}
+            });
+
+			function loadQuestion(QIndex){
+				var question = qArray[QIndex].question ;
+				var answersArr = qArray[QIndex].answers ;
+				var optionsArr = qArray[QIndex].options ;
+				var optionsStrArr = [];
+				var answersUL = "";
+				var answersSpans = []; 
+				var optionStyleClass = ["wrong","correct"];
+								
+				//generate answers 
+				for(var i= 0 ; i < answersArr.length ;  i++ ){
+					//generate answers ul 
+					answersUL += '<li class="list-group-item">' + answersArr[i] + '</li>';					
+					//generate answers spans 
+					answersSpans[i] = '<span class="badge badge-success" style="display:none;" >'+answersArr[i]+'</span>';
+				}
+				answersUL = ' <ul class="list-group list-group-horizontal">' + answersUL + '</ul>';
+				
+				//add options 
+				for(var i= 0 ; i < optionsArr.length ;  i++ ){				
+					var optionsStr ='<option value="0"></option>' ;
+					for(var j= 0 ; j < optionsArr[i].length ;  j++ ){
+						optionsStr+= '<option value="' + optionsArr[i][j][1]+ '" class="'+optionStyleClass[optionsArr[i][j][1]]+'">' + optionsArr[i][j][0] + '</option>';
+					}					
+					optionsStrArr[i] = optionsStr;				
+				}
+				
+				// inject HTML content 		
+				$("#question").html(question);	// inject the question, not yet option or correct answer spans 
+				$("#answers").html(answersUL);	//inject correct answers UL 			
+				$("#question").find("select").each(function(index) {
+					$(this).html(optionsStrArr[index]); //inject options 
+					$(this).after(answersSpans[index]);	//inject correct answer span 			
+				}); //end loop selects 
+			
+			}
+			// SHOW SELECTED VALUE.
+			$('#samples').change(function () {
+				//alert(index);
+				var questionIndex = this.options[this.selectedIndex].index ;
+				loadQuestion (questionIndex);
+				
+			});            
+         });
+</script>
+<style>
+	span {
+	  --display: none!important;
+	}
+	
+	option .wrong={background-color:red!important; }
+	option .correct={background-color:green!important; }
+</style>
+<title>PTE Quiz</title>
+</head>
+<body>
+	<div class="alert alert-primary" role="alert">
+	  PTE | READING |  Read & Write Fill In The Blank 
+	</div>
+	<form>
+	  <div class="form-group">
+		<label for="samples">Please chose question to load ... </label>
+		<select id="samples" class="form-control"></select>
+		
+	  </div>
+	</form>
+	<div id="question"> </div>
+	<a id="show_answer" class="btn btn-success" data-toggle="collapse" href="#answersTab" role="button" aria-expanded="false" aria-controls="answersTab">
+		SHOW ANSWERS 
+	</a>
+	<div id="answersTab" class="collapse" >
+	  <div id="answers" class="alert alert-success"></div> 
+	</div>
+</body>
+</html>
