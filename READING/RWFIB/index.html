@@ -191,6 +191,14 @@
 				}
 			});
 
+			function item_visited(id, visitedQuiz) {
+				if (!visited.includes(id)) {
+					visited.push(id);
+					visited.sort();
+					localStorage.setItem(visitedQuiz, JSON.stringify(visited))
+					//alert(id +" >>>>> " +JSON.stringify(visited));
+				}
+			}
 
 
 		});
