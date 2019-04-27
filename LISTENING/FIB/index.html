@@ -63,11 +63,11 @@
 					var score = 0;
 					var optionsCount = 0;
 					var script = $("#answers").text();
-					var response = $("#response").val();
+					//var response = $("#response").val();
 
 					//var diffH = Diff.diffString(script,response);
 
-					var diffHTML = diff_lineMode(response, script);
+					//var diffHTML = diff_lineMode(response, script);
 
 					//var dmp = new diff_match_patch();
 					//var diff = dmp.diff_main(response,script);
@@ -96,13 +96,14 @@
 
 			function loadQuestion(QIndex) {
 				var id = qArray[QIndex].id;
-				var script = qArray[QIndex].content;
+				var content = qArray[QIndex].content;
 				//var audio_url = qArray[QIndex].audio_url;
 				var audio_url = "audio/" + qArray[QIndex].audio_filename;
 
 				//alert(audio_url);				
 
 				// inject HTML content 		
+				$("#content").html(content);
 				$("#audio_src").attr("src", audio_url); // inject the audio_url
 
 				var audio = $("#audio");
@@ -305,9 +306,8 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="form-group">
-					<label for="response">Response:</label>
-					<textarea id="response" class="form-control" rows="3"></textarea>
+				<div class="form-group" id="content">
+			
 				</div>
 			</div>
 		</div>
