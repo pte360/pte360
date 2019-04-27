@@ -53,7 +53,7 @@
 			$("#show_answer").click(function (event) {
 				//$("answer-hint").show();   
 				if ($('#answers:visible').length) {
-					//$('.answer-hint').hide();
+					$('.answer-hint').hide();
 					//$("#answers").html('');
 					$("#answers").hide();
 					$("#diff").hide();
@@ -62,7 +62,7 @@
 				} else {
 					var score = 0;
 					var optionsCount = 0;
-					var script = $("#answers").text();
+					//var script = $("#answers").text();
 					//var response = $("#response").val();
 
 					//var diffH = Diff.diffString(script,response);
@@ -79,10 +79,10 @@
 
 					//alert(diffHTML);
 					$('#show_answer').text('HIDE ANSWERS');
-					//$('.answer-hint').show(); 
+					$('.answer-hint').show(); 
 
 
-					$("#diff").html(diffHTML);
+					//$("#diff").html(diffHTML);
 					//$("#diff").text(diff);
 
 
@@ -324,7 +324,7 @@
 			<div class="col-sm-12">
 				<div id="answersTab">
 					<div id="answers" class="alert alert-success"></div>
-					<div id="diff" class="alert alert-warning"></div>
+					
 				</div>
 			</div>
 		</div>
