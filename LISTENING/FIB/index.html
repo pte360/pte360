@@ -38,6 +38,7 @@
 			var optionClass;
 			var answersSpans = [];
 			var answersArr = [];
+			var id; //question id 
 
 			//Consruct the select  menu
 			$.getJSON(jsonURL, function (data) {
@@ -53,7 +54,7 @@
 
 
 			function loadQuestion(QIndex) {
-				var id = qArray[QIndex].id;
+				id = qArray[QIndex].id;
 				var content = qArray[QIndex].content;
 				answersArr = qArray[QIndex].answers;
 				//var audio_url = qArray[QIndex].audio_url;
@@ -91,13 +92,7 @@
 				$('#timer').timer('remove');
 				$('#timer').timer();
 
-				//visited 
-				item_visited(id, localStorageVariableName);
-
-				//refresh style for visited options 
-				$(".visited").css({ 'margin': '40px', 'background-color': 'rgb(225, 0, 255)', 'color': '#fff', 'text-shadow': '0 1px 0 rgba(0, 0, 0, 0.4)' });
-
-
+				
 			}
 			// SHOW SELECTED VALUE.
 			$('#samples').change(function () {
@@ -132,12 +127,19 @@
 					visited.push(id);
 					visited.sort();
 					localStorage.setItem(visitedQuiz, JSON.stringify(visited))
+					//refresh style for visited options 
+					
+					$(".visited").css({ 'margin': '40px', 'background-color': 'rgb(225, 0, 255)', 'color': '#fff', 'text-shadow': '0 1px 0 rgba(0, 0, 0, 0.4)' });
 					//alert(id +" >>>>> " +JSON.stringify(visited));
 				}
 			}
 
 			// SHOW ANSWERS 
 			$("#show_answer").click(function (event) {
+				
+				//visited 
+				item_visited(id, localStorageVariableName);
+
 				//$("answer-hint").show();   
 				if ($('#answers:visible').length) {
 					$('.answer-hint').hide();
