@@ -97,10 +97,23 @@
 			function loadQuestion(QIndex) {
 				var id = qArray[QIndex].id;
 				var content = qArray[QIndex].content;
+				var answersArr = qArray[QIndex].answers;
 				//var audio_url = qArray[QIndex].audio_url;
 				var audio_url = "audio/" + qArray[QIndex].audio_filename;
 
-				//alert(audio_url);				
+				var answersSpans = [];
+				var textBoxStr = '<input class="lfibinputbox" type="text" spellcheck="false">';
+				//generate answers 
+				for (var i = 0; i < answersArr.length; i++) {
+					//generate answers spans 
+					answersSpans[i] = textBoxStr + '<span class="badge badge-success answer-hint" style="display:none;" >' +	answersArr[i] +	'</span>';
+					//Replace first occurene BLANK, One By One
+					content = content.replace("{{BLANK}}", answersSpans[i]);
+					//alert(answersSpans[i]);
+				}
+
+				
+				//alert(content);				
 
 				// inject HTML content 		
 				$("#content").html(content);
@@ -125,6 +138,7 @@
 				//refresh style for visited options 
 				$(".visited").css({ 'margin': '40px', 'background-color': 'rgb(225, 0, 255)', 'color': '#fff', 'text-shadow': '0 1px 0 rgba(0, 0, 0, 0.4)' });
 
+				
 			}
 			// SHOW SELECTED VALUE.
 			$('#samples').change(function () {
@@ -168,7 +182,8 @@
 		/*class="collapse" data-toggle="collapse" href="#answersTab" role="button" aria-expanded="false" aria-controls="answersTab"*/
 
 		// SHOW ANSWERS 
-		$("#show_answer").click(function (event) {
+		$("#show_answerXXXXX").click(function (event) {
+			alert("Show Answers");
 			//$("answer-hint").show();   
 			if ($('.answer-hint:visible').length) {
 				$('.answer-hint').hide();
@@ -178,8 +193,14 @@
 				$('#show_answer').text('SHOW ANSWERS');
 
 			} else {
+				
 				var score = 0;
 				var optionsCount = 0;
+				/////////////////
+				$('html').each(function (index, value) {
+					//alert('div' + index + ':' + value);
+				});
+				/////////////////
 
 				$('#show_answer').text('HIDE ANSWERS');
 				$('.answer-hint').show();
