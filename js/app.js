@@ -61,7 +61,7 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, localStorageV
     $("#show_answer").click(function (event) {
         //questionIndex = $("#samples").options[$("#samples").selectedIndex].index;
         //var questionIndex = $("#samples").selectedIndex;
-        alert(questionIndex);
+        //alert(questionIndex);
         var id = qArray[questionIndex].id;
         //visited 
         item_visited(id, visited, localStorageVariableName);
