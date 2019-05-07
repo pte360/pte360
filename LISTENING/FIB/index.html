@@ -7,7 +7,7 @@
 
 	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 		crossorigin="anonymous"></script>
-	<script src="https://ferrycode.github.io/PTE/js/jquery-3.3.1.js"></script>
+	<script src="https:/pte360.net/js/jquery-3.3.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
 		</script>
@@ -15,207 +15,33 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 		</script>
 	<script src="../../js/jsdiff.js"></script>
 	<script src="../../js/diff_match_patch.js"></script>
 	<script src="../../js/jquery.pretty-text-diff.min.js"></script>
+	<script src="../../js/app.js"></script>
+	<script src="app.js"></script>
 
 	<script>
+
+
 		$(document).ready(function () {
-			//get visited quize items 
-			var visited = [];
+			var qArray = [];
 			var localStorageVariableName = "visitedLFIB";
-			if (localStorage.getItem(localStorageVariableName)) {
-				visited = JSON.parse(localStorage.getItem(localStorageVariableName))
-			}
+			//var visited = [];
 
-			var jsonURL = "data.json";
-			var options = "";
-			var qArray;
-			var userScoreMsg = "";
-			var optionClass;
-			var answersSpans = [];
-			var answersArr = [];
-			var id; //question id 
-
-			//Consruct the select  menu
-			$.getJSON(jsonURL, function (data) {
-				qArray = data;
-				$.each(data, function (index, value) {
-					// APPEND OR INSERT DATA TO SELECT ELEMENT.				
-					optionClass = "";
-					if (visited.includes(value.id)) optionClass = "visited";
-					$('#samples').append('<option value="' + index + '" class="' + optionClass + '">[' + value.id + '] </option>');
-				});
-				loadQuestion(0); // initially load first question 
-			});
-
-
-			function loadQuestion(QIndex) {
-				id = qArray[QIndex].id;
-				var content = qArray[QIndex].content;
-				answersArr = qArray[QIndex].answers;
-				//var audio_url = qArray[QIndex].audio_url;
-				var audio_url = "audio/" + qArray[QIndex].audio_filename;
-
-
-				var textBoxStr = '<input class="fibinputbox" size="12" type="text" spellcheck="false">';
-				var diffStr = '<span class="badge badge-warning diff" style="display:none;"></span>';
-				//generate answers 
-				for (var i = 0; i < answersArr.length; i++) {
-					//generate answers spans 
-					answersSpans[i] = textBoxStr + '&nbsp;<span class="badge badge-success answer-hint" style="display:none;" >&nbsp;' + answersArr[i] + '</span>' + diffStr ;
-					//Replace first occurene BLANK, One By One
-					content = content.replace("{{BLANK}}", answersSpans[i]);
-					//alert(answersSpans[i]);
-				}
-
-
-				//alert(content);				
-
-				// inject HTML content 		
-				$("#content").html(content);
-				$("#audio_src").attr("src", audio_url); // inject the audio_url
-
-				var audio = $("#audio");
-				audio[0].pause();
-				audio[0].load(); //suspends and restores all audio element
-
-				setTimeout(function () {
-					audio[0].play();
-				}, 5000)
-
-
-				//reset timer 
-				$('#timer').timer('remove');
-				$('#timer').timer();
-
-				
-			}
-			// SHOW SELECTED VALUE.
-			$('#samples').change(function () {
-				//alert(index);
-				var questionIndex = this.options[this.selectedIndex].index;
-				this.options[this.selectedIndex].className = "visited";
-				loadQuestion(questionIndex);
-
-				$("#answers").hide();
-				$("#diff").hide();
-			});
-
-			$("#next").click(function () {
-				var nextElement = $('#samples > option:selected').next('option');
-				if (nextElement.length > 0) {
-					$('#samples > option:selected').removeAttr('selected').next('option').attr('selected', 'selected');
-					$('#samples').trigger('change');
-				}
-
-			});
-
-			$("#prev").click(function () {
-				var nextElement = $('#samples > option:selected').prev('option');
-				if (nextElement.length > 0) {
-					$('#samples > option:selected').removeAttr('selected').prev('option').attr('selected', 'selected');
-					$('#samples').trigger('change');
-				}
-			});
-
-			function item_visited(id, visitedQuiz) {
-				if (!visited.includes(id)) {
-					visited.push(id);
-					visited.sort();
-					localStorage.setItem(visitedQuiz, JSON.stringify(visited))
-					//refresh style for visited options 
-					
-					$(".visited").css({ 'margin': '40px', 'background-color': 'rgb(225, 0, 255)', 'color': '#fff', 'text-shadow': '0 1px 0 rgba(0, 0, 0, 0.4)' });
-					//alert(id +" >>>>> " +JSON.stringify(visited));
-				}
-			}
-
-			// SHOW ANSWERS 
-			$("#show_answer").click(function (event) {
-				
-				//visited 
-				item_visited(id, localStorageVariableName);
-
-				//$("answer-hint").show();   
-				if ($('#answers:visible').length) {
-					$('.answer-hint').hide();
-					$('.diff').hide();
-					//$("#answers").html('');
-					$("#answers").hide();
-					$("#diff").hide();
-					$('#show_answer').text('SHOW ANSWERS');
-
-				} else {
-					var score = 0;
-
-					var optionsCount = 0;
-					var diff = [];
-
-					$('.lfibinputbox').each(function (index, obj) {
-						diff[index] = diff_lineMode(obj.value,answersArr[index]);	
-						if(obj.value.trim()==answersArr[index].trim()) score++; 			
-					});
-
-					$('.diff').each(function (index, obj) {
-						obj.innerHTML = diff[index]  ;					
-					});
-			
-					$('#show_answer').text('HIDE ANSWERS');
-					$('.answer-hint').show();
-					$('.diff').show();
-
-
-					//$("#diff").html(diffHTML);
-					//$("#diff").text(diff);
-					var optionsCount = answersArr.length ;
-					var smile = ":)";
-					var scorePcnt = Math.round(((score * 10) / optionsCount));
-
-					if (scorePcnt >= 5) {
-						smile = ", Very Good  :)";
-						$("#answers").attr('class', 'alert alert-success');
-					} else if (scorePcnt < 5 && scorePcnt > 0) {
-						smile = ", Good but do better  :|";
-						$("#answers").attr('class', 'alert alert-warning');
-					} else {
-						smile = ", Be ready next time  :(";
-						$("#answers").attr('class', 'alert alert-danger');
-					}
-
-					var userScoreMsg = ' Your score = ' + score + ' out of ' + optionsCount + ' in ' + $("#timer").text() +' ' + smile;
-
-				
-					$("#answers").html(userScoreMsg);
-
-					$("#answers").show();
-					$("#diff").show();
-				}
-			});
-
+			//Draw the content canvas
+			loadContent(loadQuestion, showResult, hideResult, qArray, localStorageVariableName);
 
 		});
-		/*class="collapse" data-toggle="collapse" href="#answersTab" role="button" aria-expanded="false" aria-controls="answersTab"*/
 
-
-
-		function diff_lineMode(text1, text2) {
-			var dmp = new diff_match_patch();
-			//var a = dmp.diff_linesToChars_(text1, text2);
-			//var lineText1 = a.chars1;
-			//var lineText2 = a.chars2;
-			//var lineArray = a.lineArray;
-			//var diffs = dmp.diff_main(lineText1, lineText2, false);
-			var diffs = dmp.diff_main(text1, text2);
-			dmp.diff_cleanupSemantic(diffs);
-			//dmp.diff_charsToLines_(diffs, lineArray);
-			//dmp.diff_prettyHtml(diffs);
-			var diffHTML = dmp.diff_prettyHtml(diffs);
-			return diffHTML;
-		}
 	</script>
 	<style type="text/css">
 		.visited {
@@ -226,13 +52,11 @@
 		}
 	</style>
 	<style type="text/css">
-		#answers {
+		#result {
 			display: none;
 		}
 
-		#diff {
-			display: none;
-		}
+
 
 		option .wrong {
 			background-color: red !important;
@@ -242,7 +66,7 @@
 			background-color: green !important;
 		}
 	</style>
-	<title>PTE | LISTENING | Write From Dictation </title>
+	<title> PTE | LISTENING | Fill In The Blank (FIB) </title>
 </head>
 
 <body>
@@ -250,45 +74,70 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<span class="align-middle">
-					<h2> PTE | LISTENING | Write From Dictation </h2>
+					<h2> PTE | LISTENING | Fill In The Blank (FIB) </h2>
 				</span>
 			</div>
 		</div>
+
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="alert alert-info" role="alert">
-					Please select or navigate to question ...
+				<div class="input-group input-group-md">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fa fa-search"></i></span>
+						<span class="input-group-text">Find question </span>
+						
+					</div>
+					<input type="text" id="searchKeywords" class="form-control" placeholder="Search keywords">
+
+
+					<select class="custom-select col-sm-2" id="sort_by">
+
+						<option value="id">Sort by (id)</option>
+						<option value="rating">Sort by (rating)</option>
+
+					</select>
+
+					<div class="input-group-append">
+						<button id="reset" class="btn btn-outline-secondary" type="button">Reset</button>
+						<button id="search" class="btn btn-outline-secondary" type="submit">Search</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm">
-				<form>
-					<div class="form-row">
-						<div class="col-sm-1">
-							<button id="prev" type="button" class="btn btn-outline-dark">
-								<< Prev</button> </div> <div class="col-sm-9">
-									<select id="samples" class="form-control"></select>
-						</div>
-						<div class="col-sm-2">
-							<button id="next" type="button" class="btn btn-outline-dark">Next >></button>
-						</div>
+			<div class="col-sm-12">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<button id="prev" class="btn btn-outline-secondary" type="button"><i
+								class="fa fa-chevron-left"></i></button>
 					</div>
-				</form>
+					<select class="custom-select" id="samples"></select>
+					<div class="input-group-append">
+						<button id="next" class="btn btn-outline-secondary" type="button"><i
+								class="fa fa-chevron-right"></i></button>
+					</div>
+				</div>
 			</div>
 		</div>
+
 		<div class="row">
 			<div class="col-sm-10">
+				<div class="alert alert-primary" role="alert">
+					You will hear a recording. Type the missing words in each blank.
+				</div>
 			</div>
-			<div class="col-sm-2 text-center border-left border-danger">
-				<h3 class="" id="timer">
-					<h3>
+			<div class="col-sm-2">
+				<div class="alert alert-secondary text-center" role="alert">
+					<!--<span style="display:block;"><i class="fas fa-hourglass-half" ></i>-->
+					
+					<kbd id="timer"></kbd>
+					<!--</span>-->
+				</div>
 			</div>
-			<br>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<br>
+
 			</div>
 		</div>
 		<div class="row">
@@ -302,25 +151,28 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="form-group" id="content">
-
+				<div id="content">
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<a id="show_answer" class="btn btn-lg btn-success"> SHOW ANSWERS </a>
+				<br>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
+				<a id="show_answer" class="btn btn-primary"> SHOW ANSWERS </a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<div id="answersTab">
-					<div id="answers" class="alert alert-success"></div>
-
+				<br>
+			</div>
+		</div>
+		<div id="result" class="row">
+			<div class="col-sm-12">
+				<div id="answers">
 				</div>
 			</div>
 		</div>
