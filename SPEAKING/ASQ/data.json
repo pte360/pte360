@@ -1,0 +1,2319 @@
+[
+    {
+        "id": 1,
+        "question_script": "What is the solid form of water?",
+        "answers": "Ice",
+        "audio_filename": "1001.mp3",
+        "rating": 13
+    },
+    {
+        "id": 2,
+        "question_script": "What is the solid form of water?",
+        "answers": "Ice",
+        "audio_filename": "1002.mp3",
+        "rating": 13
+    },
+    {
+        "id": 3,
+        "question_script": "What studies the structure of earth, geology or geography?",
+        "answers": "Geology",
+        "audio_filename": "1003.mp3",
+        "rating": 7
+    },
+    {
+        "id": 4,
+        "question_script": "Science concerned about study of earth materials and nutrients is geology or geography?",
+        "answers": "Geology",
+        "audio_filename": "1004.mp3",
+        "rating": 0
+    },
+    {
+        "id": 5,
+        "question_script": "What information does a terrestrial globe provide?",
+        "answers": "Geography",
+        "audio_filename": "1005.mp3",
+        "rating": 0
+    },
+    {
+        "id": 6,
+        "question_script": "The part of computer you can carry with you and has the same name as that of animal?",
+        "answers": "Mouse",
+        "audio_filename": "1006.mp3",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "question_script": "How do we call 7 days in time period?",
+        "answers": "Week",
+        "audio_filename": "1007.mp3",
+        "rating": 0
+    },
+    {
+        "id": 8,
+        "question_script": "What is the pointing device of our computer?",
+        "answers": "Mouse",
+        "audio_filename": "1008.mp3",
+        "rating": 4
+    },
+    {
+        "id": 9,
+        "question_script": "What do you call a person who is working for a company?",
+        "answers": "Employee",
+        "audio_filename": "1009.mp3",
+        "rating": 9
+    },
+    {
+        "id": 10,
+        "question_script": "Horse is a mammal, amphibian or reptile?",
+        "answers": "Mammal",
+        "audio_filename": "1010.mp3",
+        "rating": 0
+    },
+    {
+        "id": 11,
+        "question_script": "What�s the fastest way to get from the 20th floor to the 1st floor?",
+        "answers": "(By) Elevator",
+        "audio_filename": "1011.mp3",
+        "rating": 0
+    },
+    {
+        "id": 12,
+        "question_script": "What helps you go up in a 25 floor building?",
+        "answers": "Ladder/Stairs/ Lift/elevator",
+        "audio_filename": "1012.mp3",
+        "rating": 0
+    },
+    {
+        "id": 13,
+        "question_script": "What is the time of a day before noon called?",
+        "answers": "Morning",
+        "audio_filename": "1013.mp3",
+        "rating": 0
+    },
+    {
+        "id": 14,
+        "question_script": "What is the quickest way of traveling from Tokyo to Paris?",
+        "answers": "(By) Airplane",
+        "audio_filename": "1014.mp3",
+        "rating": 0
+    },
+    {
+        "id": 15,
+        "question_script": "Which of these would probably be found in most homes around the world; A computer, a bed, or a television?",
+        "answers": "A bed",
+        "audio_filename": "1015.mp3",
+        "rating": 1
+    },
+    {
+        "id": 16,
+        "question_script": "Some calendars begin the week on Sunday. What is the other day which commonly starts a week?",
+        "answers": "Monday",
+        "audio_filename": "1016.mp3",
+        "rating": 17
+    },
+    {
+        "id": 17,
+        "question_script": "Who is the person in charge of a football match?",
+        "answers": "The referee",
+        "audio_filename": "1017.mp3",
+        "rating": 0
+    },
+    {
+        "id": 18,
+        "question_script": "Jane and Peter have three children. They are 4, 13 and 15 years old. They only have one son, who is their youngest child. How old is their middle child?",
+        "answers": "13",
+        "audio_filename": "1018.mp3",
+        "rating": 0
+    },
+    {
+        "id": 19,
+        "question_script": "Which section of the newspaper gives the editor�s opinion?",
+        "answers": "The editorial",
+        "audio_filename": "1019.mp3",
+        "rating": 0
+    },
+    {
+        "id": 20,
+        "question_script": "What instrument will you use to examine very small objects or life forms?",
+        "answers": "Microscope",
+        "audio_filename": "1020.mp3",
+        "rating": 0
+    },
+    {
+        "id": 21,
+        "question_script": "What is a destructive program that spreads from computer to computer?",
+        "answers": "Virus",
+        "audio_filename": "1021.mp3",
+        "rating": 0
+    },
+    {
+        "id": 22,
+        "question_script": "What term is used for animals such as humans that usually give birth to live young; Mammals or reptiles?",
+        "answers": "Mammals",
+        "audio_filename": "1022.mp3",
+        "rating": 2
+    },
+    {
+        "id": 23,
+        "question_script": "What do you call a system of government in which people vote for the people that will represent them?",
+        "answers": "Democracy",
+        "audio_filename": "1023.mp3",
+        "rating": 0
+    },
+    {
+        "id": 24,
+        "question_script": "What is the name of a system of government in which the people elect their leaders?",
+        "answers": "Democracy",
+        "audio_filename": "1024.mp3",
+        "rating": 0
+    },
+    {
+        "id": 25,
+        "question_script": "Where would you go to work out on a treadmill?",
+        "answers": "Gym",
+        "audio_filename": "1025.mp3",
+        "rating": 0
+    },
+    {
+        "id": 26,
+        "question_script": "How would you describe an economy based largely on farming?",
+        "answers": "Agronomics",
+        "audio_filename": "1026.mp3",
+        "rating": 1
+    },
+    {
+        "id": 27,
+        "question_script": "What is the study of the stars and planets called?",
+        "answers": "Astronomy",
+        "audio_filename": "1027.mp3",
+        "rating": 0
+    },
+    {
+        "id": 28,
+        "question_script": "What do we call the piece of paper that proves that you have bought an item?",
+        "answers": "Receipt",
+        "audio_filename": "1028.mp3",
+        "rating": 17
+    },
+    {
+        "id": 29,
+        "question_script": "What emergency service is usually called when someone is in trouble at sea; Ambulance or Coast guard?",
+        "answers": "Coast guard",
+        "audio_filename": "1029.mp3",
+        "rating": 0
+    },
+    {
+        "id": 30,
+        "question_script": "What word describes moving a program or other material from a website to your computer?",
+        "answers": "Download(ing)",
+        "audio_filename": "1030.mp3",
+        "rating": 0
+    },
+    {
+        "id": 31,
+        "question_script": "What do we call a picture that a doctor takes to see inside your body?",
+        "answers": "X-ray",
+        "audio_filename": "1031.mp3",
+        "rating": 4
+    },
+    {
+        "id": 32,
+        "question_script": "What crime has someone stealing from a shop committed, Shop fitting or Shop lifting?",
+        "answers": "Shop lifting",
+        "audio_filename": "1032.mp3",
+        "rating": 0
+    },
+    {
+        "id": 33,
+        "question_script": "If someone is feeling a little ill, they may say they are feeling under the what?",
+        "answers": "Weather",
+        "audio_filename": "1033.mp3",
+        "rating": 0
+    },
+    {
+        "id": 34,
+        "question_script": "If someone is feeling ill, they will say �I am feeling under the �. .� what?",
+        "answers": "Weather",
+        "audio_filename": "1034.mp3",
+        "rating": 0
+    },
+    {
+        "id": 35,
+        "question_script": "What is the last game in a sports competition that decides the champion?",
+        "answers": "Final",
+        "audio_filename": "1035.mp3",
+        "rating": 0
+    },
+    {
+        "id": 36,
+        "question_script": "What is the general term for paintings of countryside or natural views?",
+        "answers": "Landscape",
+        "audio_filename": "1036.mp3",
+        "rating": 2
+    },
+    {
+        "id": 37,
+        "question_script": "Which of these would probably be found in an office, a printer, a blanket or a nailbrush?",
+        "answers": "Printer",
+        "audio_filename": "1037.mp3",
+        "rating": 0
+    },
+    {
+        "id": 38,
+        "question_script": "One who plans and draws the design of buildings and superintends their erection?",
+        "answers": "architect",
+        "audio_filename": "1038.mp3",
+        "rating": 1
+    },
+    {
+        "id": 39,
+        "question_script": "What term is used for the amount of money you pay a landlord for living in their house or apartment?",
+        "answers": "rent",
+        "audio_filename": "1039.mp3",
+        "rating": 0
+    },
+    {
+        "id": 40,
+        "question_script": "What do we call the meeting where the employer asks the potential employee questions about their work experience?",
+        "answers": "interview",
+        "audio_filename": "1040.mp3",
+        "rating": 0
+    },
+    {
+        "id": 41,
+        "question_script": "What is a painting of a person�s head usually called?",
+        "answers": "Portrait",
+        "audio_filename": "1041.mp3",
+        "rating": 0
+    },
+    {
+        "id": 42,
+        "question_script": "Where would you find an urban area, In the city or in the countryside?",
+        "answers": "In the city",
+        "audio_filename": "1042.mp3",
+        "rating": 0
+    },
+    {
+        "id": 43,
+        "question_script": "What point of the compass is directly opposite east?",
+        "answers": "West",
+        "audio_filename": "1043.mp3",
+        "rating": 0
+    },
+    {
+        "id": 44,
+        "question_script": "What do you call an apartment that is below ground level, a basement apartment or a penthouse apartment?",
+        "answers": "A basement apartment",
+        "audio_filename": "1044.mp3",
+        "rating": 0
+    },
+    {
+        "id": 45,
+        "question_script": "What feature do pianos and computers have in common?",
+        "answers": "The keyboard",
+        "audio_filename": "1045.mp3",
+        "rating": 0
+    },
+    {
+        "id": 46,
+        "question_script": "If you are feeling fed up, is it a positive or a negative feeling?",
+        "answers": "Negative",
+        "audio_filename": "1046.mp3",
+        "rating": 4
+    },
+    {
+        "id": 47,
+        "question_script": "Where would you most likely go to buy a flower, a bakery, a florist or a supermarket?",
+        "answers": "a florist",
+        "audio_filename": "1047.mp3",
+        "rating": 0
+    },
+    {
+        "id": 48,
+        "question_script": "A specialist who repairs leaking water pipes is called a?",
+        "answers": "Plumber",
+        "audio_filename": "1048.mp3",
+        "rating": 0
+    },
+    {
+        "id": 49,
+        "question_script": "Where would you store meat you wish to keep frozen at home?",
+        "answers": "The freezer",
+        "audio_filename": "1049.mp3",
+        "rating": 0
+    },
+    {
+        "id": 50,
+        "question_script": "What is the most important document you have to show if you wanted to hire a car?",
+        "answers": "Your driver�s license",
+        "audio_filename": "1050.mp3",
+        "rating": 0
+    },
+    {
+        "id": 51,
+        "question_script": "If you sold your house for more money than you bought, did you make a profit or loss?",
+        "answers": "profit",
+        "audio_filename": "1051.mp3",
+        "rating": 0
+    },
+    {
+        "id": 52,
+        "question_script": "A business does not want to make a loss, What does it want to make?",
+        "answers": "Profit",
+        "audio_filename": "1052.mp3",
+        "rating": 1
+    },
+    {
+        "id": 53,
+        "question_script": "Which ocean is located on the west of the US?",
+        "answers": "The Pacific Ocean",
+        "audio_filename": "1053.mp3",
+        "rating": 0
+    },
+    {
+        "id": 54,
+        "question_script": "Three words spoken and asked which one is odd (Decrease, Increase and Decline)?",
+        "answers": "increase",
+        "audio_filename": "1054.mp3",
+        "rating": 0
+    },
+    {
+        "id": 55,
+        "question_script": "A fish like puffer fish or Jelly fish was shown and they asked about its habitat?",
+        "answers": "Sea water, ocean,",
+        "audio_filename": "1055.mp3",
+        "rating": 0
+    },
+    {
+        "id": 56,
+        "question_script": "A place or building where dead bodies are kept. Cemetery or Mortuary?",
+        "answers": "Mortuary",
+        "audio_filename": "1056.mp3",
+        "rating": 0
+    },
+    {
+        "id": 57,
+        "question_script": "What do tons, ounces, and pounds refer to?",
+        "answers": "Weights",
+        "audio_filename": "1057.mp3",
+        "rating": 15
+    },
+    {
+        "id": 58,
+        "question_script": "Who was the predecessor for King Bernard?",
+        "answers": "King Russell",
+        "audio_filename": "1058.mp3",
+        "rating": 0
+    },
+    {
+        "id": 59,
+        "question_script": "What is a man-made river called?",
+        "answers": "Canal",
+        "audio_filename": "1059.mp3",
+        "rating": 0
+    },
+    {
+        "id": 60,
+        "question_script": "What do you call an individual musical sound?",
+        "answers": "Solo",
+        "audio_filename": "1060.mp3",
+        "rating": 0
+    },
+    {
+        "id": 61,
+        "question_script": "Which is the best method of transportation, Bus, Plane or ship?",
+        "answers": "Bus",
+        "audio_filename": "1061.mp3",
+        "rating": 0
+    },
+    {
+        "id": 62,
+        "question_script": "Which is not a way of public transportation, Train, Model car or Airplane?",
+        "answers": "Model car",
+        "audio_filename": "1062.mp3",
+        "rating": 17
+    },
+    {
+        "id": 63,
+        "question_script": "Butterfly in the picture and asks what does it do with wings, Grasp, Flutter ?",
+        "answers": "Flutter",
+        "audio_filename": "1063.mp3",
+        "rating": 0
+    },
+    {
+        "id": 64,
+        "question_script": "Letter C was shown in image. What do you call the word in the book which is starting with this letter?",
+        "answers": "Contents",
+        "audio_filename": "1064.mp3",
+        "rating": 0
+    },
+    {
+        "id": 65,
+        "question_script": "A thing no longer in use. Obsolete, Out of date or both?",
+        "answers": "Both",
+        "audio_filename": "1065.mp3",
+        "rating": 0
+    },
+    {
+        "id": 66,
+        "question_script": "Circle formula to find radius was given and equation was also given?",
+        "answers": "Pie or square",
+        "audio_filename": "1066.mp3",
+        "rating": 6
+    },
+    {
+        "id": 67,
+        "question_script": "Scientists believe in subjective knowledge or objective?",
+        "answers": "Objective",
+        "audio_filename": "1067.mp3",
+        "rating": 0
+    },
+    {
+        "id": 68,
+        "question_script": "Having a lot of fat in one�s body?",
+        "answers": "Obesity",
+        "audio_filename": "1068.mp3",
+        "rating": 0
+    },
+    {
+        "id": 69,
+        "question_script": "The one who is unable to pay his debts. In debt or Insolvent?",
+        "answers": "Insolvent",
+        "audio_filename": "1069.mp3",
+        "rating": 0
+    },
+    {
+        "id": 70,
+        "question_script": "What vegetarians can eat?",
+        "answers": "Vegetables",
+        "audio_filename": "1070.mp3",
+        "rating": 0
+    },
+    {
+        "id": 71,
+        "question_script": "On compass, what is the opposite of northwest?",
+        "answers": "Southeast",
+        "audio_filename": "1071.mp3",
+        "rating": 2
+    },
+    {
+        "id": 72,
+        "question_script": "Algebra, statistics are branches of which field?",
+        "answers": "Mathematics",
+        "audio_filename": "1072.mp3",
+        "rating": 0
+    },
+    {
+        "id": 73,
+        "question_script": "In mathematics there are four basic operations: addition, subtraction, multiplication and what?",
+        "answers": "division",
+        "audio_filename": "1073.mp3",
+        "rating": 8
+    },
+    {
+        "id": 74,
+        "question_script": "What is the difference between wall clock and wrist watch; (a) Colour (b) size (c) features (d) technology?",
+        "answers": "Size",
+        "audio_filename": "1074.mp3",
+        "rating": 0
+    },
+    {
+        "id": 75,
+        "question_script": "Plants that are grown in between rocks?",
+        "answers": "alpine plants OR Lithophytes",
+        "audio_filename": "1075.mp3",
+        "rating": 0
+    },
+    {
+        "id": 76,
+        "question_script": "At what ceremony, the students receive their degree or diploma at end of their study?",
+        "answers": "Graduation day",
+        "audio_filename": "1076.mp3",
+        "rating": 0
+    },
+    {
+        "id": 77,
+        "question_script": "For killing bacteria which drugs used are?",
+        "answers": "Antibiotics",
+        "audio_filename": "1077.mp3",
+        "rating": 0
+    },
+    {
+        "id": 78,
+        "question_script": "A notice of death in a newspaper?",
+        "answers": "Obituary",
+        "audio_filename": "1078.mp3",
+        "rating": 0
+    },
+    {
+        "id": 79,
+        "question_script": "Picture given which show like spacecraft and person wearing spacesuit, What place is shown in the picture?",
+        "answers": "space",
+        "audio_filename": "1079.mp3",
+        "rating": 0
+    },
+    {
+        "id": 80,
+        "question_script": "What do we use to launch space shuttle?",
+        "answers": "Rocket boosters",
+        "audio_filename": "1080.mp3",
+        "rating": 0
+    },
+    {
+        "id": 81,
+        "question_script": "Medicine which induces sleep?",
+        "answers": "Narcotic",
+        "audio_filename": "1081.mp3",
+        "rating": 0
+    },
+    {
+        "id": 82,
+        "question_script": "Image of Scientist doing experiment. What the person is wearing to protect eyes from Chemical?",
+        "answers": "Goggle",
+        "audio_filename": "1082.mp3",
+        "rating": 0
+    },
+    {
+        "id": 83,
+        "question_script": "Which kind of transportation involves human effort, horse riding or cycling?",
+        "answers": "cycling",
+        "audio_filename": "1083.mp3",
+        "rating": 11
+    },
+    {
+        "id": 84,
+        "question_script": "How many seasons are in a year?",
+        "answers": "Four",
+        "audio_filename": "1084.mp3",
+        "rating": 0
+    },
+    {
+        "id": 85,
+        "question_script": "How many hours are in a day?",
+        "answers": "Twenty four",
+        "audio_filename": "1085.mp3",
+        "rating": 0
+    },
+    {
+        "id": 86,
+        "question_script": "the phrase used to describe the way that something repeatedly increases and decreases or rises and falls?",
+        "answers": "Ebb and flow",
+        "audio_filename": "1086.mp3",
+        "rating": 0
+    },
+    {
+        "id": 87,
+        "question_script": "Sleep enjoyed in the afternoon. Siesta or Nap?",
+        "answers": "Siesta",
+        "audio_filename": "1087.mp3",
+        "rating": 0
+    },
+    {
+        "id": 88,
+        "question_script": "Language which is confused and unintelligible. Jargon or vocabulary?",
+        "answers": "Jargon",
+        "audio_filename": "1088.mp3",
+        "rating": 0
+    },
+    {
+        "id": 89,
+        "question_script": "A man whose wife is dead. Is he a Widow or Widower?",
+        "answers": "Widower",
+        "audio_filename": "1089.mp3",
+        "rating": 0
+    },
+    {
+        "id": 90,
+        "question_script": "A woman whose husband is dead?",
+        "answers": "Widow",
+        "audio_filename": "1090.mp3",
+        "rating": 0
+    },
+    {
+        "id": 91,
+        "question_script": "One whose business is to find out criminals. Detectives or police?",
+        "answers": "Detectives",
+        "audio_filename": "1091.mp3",
+        "rating": 0
+    },
+    {
+        "id": 92,
+        "question_script": "The government runs by the dictator. Autocracy or Democracy?",
+        "answers": "Autocracy",
+        "audio_filename": "1092.mp3",
+        "rating": 0
+    },
+    {
+        "id": 93,
+        "question_script": "A government where the power is concentrated in the hands of one person?",
+        "answers": "Autocracy",
+        "audio_filename": "1093.mp3",
+        "rating": 0
+    },
+    {
+        "id": 94,
+        "question_script": "One who tests eyesight and sells spectacles?",
+        "answers": "Optician",
+        "audio_filename": "1094.mp3",
+        "rating": 2
+    },
+    {
+        "id": 95,
+        "question_script": "What does an optic person deal with?",
+        "answers": "Spectacles",
+        "audio_filename": "1095.mp3",
+        "rating": 0
+    },
+    {
+        "id": 96,
+        "question_script": "What do people wear, if they can�t see very well?",
+        "answers": "Spectacles",
+        "audio_filename": "1096.mp3",
+        "rating": 0
+    },
+    {
+        "id": 97,
+        "question_script": "A disease which spreads by contact? Contagious",
+        "answers": "Contagious disease",
+        "audio_filename": "1097.mp3",
+        "rating": 0
+    },
+    {
+        "id": 98,
+        "question_script": "A man who thinks only for himself?",
+        "answers": "Egoistic or self centered",
+        "audio_filename": "1098.mp3",
+        "rating": 0
+    },
+    {
+        "id": 99,
+        "question_script": "An animal living both on land in water?",
+        "answers": "Amphibian",
+        "audio_filename": "1099.mp3",
+        "rating": 0
+    },
+    {
+        "id": 100,
+        "question_script": "A building for keeping and feeding horses in. Stable or Kennel?",
+        "answers": "Stable",
+        "audio_filename": "1100.mp3",
+        "rating": 0
+    },
+    {
+        "id": 101,
+        "question_script": "A string of beads used for counting prayers. Rosary or Garland?",
+        "answers": "Rosary",
+        "audio_filename": "1101.mp3",
+        "rating": 0
+    },
+    {
+        "id": 102,
+        "question_script": "Art and science dealing with rules of language. Grammar or Literature?",
+        "answers": "Grammar",
+        "audio_filename": "1102.mp3",
+        "rating": 0
+    },
+    {
+        "id": 103,
+        "question_script": "Not limited by person or number. Infinite or Finite?",
+        "answers": "Infinite",
+        "audio_filename": "1103.mp3",
+        "rating": 0
+    },
+    {
+        "id": 104,
+        "question_script": "Something that is quickly and easily set on fire and burned. Flammable or Nonflammable?",
+        "answers": "Flammable",
+        "audio_filename": "1104.mp3",
+        "rating": 0
+    },
+    {
+        "id": 105,
+        "question_script": "The science of animal life. Biology or Zoology?",
+        "answers": "Zoology",
+        "audio_filename": "1105.mp3",
+        "rating": 0
+    },
+    {
+        "id": 106,
+        "question_script": "One who kills animals and sells their flesh. Butcher or barber?",
+        "answers": "Butcher",
+        "audio_filename": "1106.mp3",
+        "rating": 0
+    },
+    {
+        "id": 107,
+        "question_script": "A great lover of books?",
+        "answers": "Bibliophile",
+        "audio_filename": "1107.mp3",
+        "rating": 0
+    },
+    {
+        "id": 108,
+        "question_script": "What is the name of ground military forces?",
+        "answers": "Army",
+        "audio_filename": "1108.mp3",
+        "rating": 0
+    },
+    {
+        "id": 109,
+        "question_script": "What is someone that can�t see called?",
+        "answers": "Blind",
+        "audio_filename": "1109.mp3",
+        "rating": 1
+    },
+    {
+        "id": 110,
+        "question_script": "What do you call the middle of something?",
+        "answers": "Centre",
+        "audio_filename": "1110.mp3",
+        "rating": 0
+    },
+    {
+        "id": 111,
+        "question_script": "Whose job is it to treat people that are ill or have an injury at a hospital?",
+        "answers": "Doctor",
+        "audio_filename": "1111.mp3",
+        "rating": 9
+    },
+    {
+        "id": 112,
+        "question_script": "What is the process of teaching and learning called?",
+        "answers": "Education",
+        "audio_filename": "1112.mp3",
+        "rating": 0
+    },
+    {
+        "id": 113,
+        "question_script": "What kind of book is written by a person about their own life?",
+        "answers": "Autobiography",
+        "audio_filename": "1113.mp3",
+        "rating": 12
+    },
+    {
+        "id": 114,
+        "question_script": "What is the red liquid that flows through a body?",
+        "answers": "Blood",
+        "audio_filename": "1114.mp3",
+        "rating": 9
+    },
+    {
+        "id": 115,
+        "question_script": "What is the payment of a student�s education by an organization called?",
+        "answers": "Scholarship",
+        "audio_filename": "1115.mp3",
+        "rating": 0
+    },
+    {
+        "id": 116,
+        "question_script": "What is the piece of paper with official information written on it called?",
+        "answers": "Document",
+        "audio_filename": "1116.mp3",
+        "rating": 0
+    },
+    {
+        "id": 117,
+        "question_script": "What is the name of a building where you can borrow books?",
+        "answers": "Library",
+        "audio_filename": "1117.mp3",
+        "rating": 0
+    },
+    {
+        "id": 118,
+        "question_script": "Who is a person that makes bread, cakes and pastries?",
+        "answers": "Baker",
+        "audio_filename": "1118.mp3",
+        "rating": 0
+    },
+    {
+        "id": 119,
+        "question_script": "What organ controls your speech, feelings, body movement and thoughts?",
+        "answers": "Brain",
+        "audio_filename": "1119.mp3",
+        "rating": 0
+    },
+    {
+        "id": 120,
+        "question_script": "What piece of equipment shows a person what direction they are traveling?",
+        "answers": "Compass",
+        "audio_filename": "1120.mp3",
+        "rating": 0
+    },
+    {
+        "id": 121,
+        "question_script": "What is a series of events that happen in your mind while you are sleeping?",
+        "answers": "Dream",
+        "audio_filename": "1121.mp3",
+        "rating": 0
+    },
+    {
+        "id": 122,
+        "question_script": "What is a person that belongs to an organization called?",
+        "answers": "Member",
+        "audio_filename": "1122.mp3",
+        "rating": 0
+    },
+    {
+        "id": 123,
+        "question_script": "Who cuts men�s hair?",
+        "answers": "Barber",
+        "audio_filename": "1123.mp3",
+        "rating": 0
+    },
+    {
+        "id": 124,
+        "question_script": "What is it called when two or more people are speaking to each other?",
+        "answers": "Conversation",
+        "audio_filename": "1124.mp3",
+        "rating": 0
+    },
+    {
+        "id": 125,
+        "question_script": "What is a violent conflict between two or more countries?",
+        "answers": "War",
+        "audio_filename": "1125.mp3",
+        "rating": 0
+    },
+    {
+        "id": 126,
+        "question_script": "What do you call the number of people living in a specific area?",
+        "answers": "Population",
+        "audio_filename": "1126.mp3",
+        "rating": 0
+    },
+    {
+        "id": 127,
+        "question_script": "What do you call a person that can�t hear?",
+        "answers": "Deaf",
+        "audio_filename": "1127.mp3",
+        "rating": 0
+    },
+    {
+        "id": 128,
+        "question_script": "What is the day that someone is born?",
+        "answers": "Birthday",
+        "audio_filename": "1128.mp3",
+        "rating": 0
+    },
+    {
+        "id": 129,
+        "question_script": "What plan shows how much money is available and how it will be spent?",
+        "answers": "Budget",
+        "audio_filename": "1129.mp3",
+        "rating": 0
+    },
+    {
+        "id": 130,
+        "question_script": "Who is the main journalist responsible for producing newspaper or magazine?",
+        "answers": "Editor",
+        "audio_filename": "1130.mp3",
+        "rating": 0
+    },
+    {
+        "id": 131,
+        "question_script": "What planet do we live on?",
+        "answers": "Earth",
+        "audio_filename": "1131.mp3",
+        "rating": 4
+    },
+    {
+        "id": 132,
+        "question_script": "What is the job of someone that looks after your teeth and gums?",
+        "answers": "Dentist",
+        "audio_filename": "1132.mp3",
+        "rating": 20
+    },
+    {
+        "id": 133,
+        "question_script": "What is the time period before noon called?",
+        "answers": "Ante meridian (A.M.)",
+        "audio_filename": "1133.mp3",
+        "rating": 0
+    },
+    {
+        "id": 134,
+        "question_script": "What is the time after noon called?",
+        "answers": "Post meridian (P.M.)",
+        "audio_filename": "1134.mp3",
+        "rating": 0
+    },
+    {
+        "id": 135,
+        "question_script": "What organ do cardiologists specialize in?",
+        "answers": "Heart",
+        "audio_filename": "1135.mp3",
+        "rating": 10
+    },
+    {
+        "id": 136,
+        "question_script": "Which kind of punishment for a crime is the less severe, an imprisonment or community service?",
+        "answers": "Community service",
+        "audio_filename": "1136.mp3",
+        "rating": 0
+    },
+    {
+        "id": 137,
+        "question_script": "What is the name for the huge natural body that orbits the sun?",
+        "answers": "Planet",
+        "audio_filename": "1137.mp3",
+        "rating": 1
+    },
+    {
+        "id": 138,
+        "question_script": "Where do you pay for your purchases at a supermarket?",
+        "answers": "Till or Checkout or Cashier",
+        "audio_filename": "1138.mp3",
+        "rating": 0
+    },
+    {
+        "id": 139,
+        "question_script": "How many sides are there in a bilateral agreement?",
+        "answers": "Two",
+        "audio_filename": "1139.mp3",
+        "rating": 0
+    },
+    {
+        "id": 140,
+        "question_script": "What is the source of solar energy?",
+        "answers": "Sun",
+        "audio_filename": "1140.mp3",
+        "rating": 12
+    },
+    {
+        "id": 141,
+        "question_script": "What do you call the document that tells your qualification and work exp?",
+        "answers": "CV, Curriculum Vitae / Resume",
+        "audio_filename": "1141.mp3",
+        "rating": 8
+    },
+    {
+        "id": 142,
+        "question_script": "What do you call a very long essay that students have to write for a doctoral degree?",
+        "answers": "Thesis or dissertation",
+        "audio_filename": "1142.mp3",
+        "rating": 3
+    },
+    {
+        "id": 143,
+        "question_script": "When the writer of the book is unknown, what word do we use for the writer?",
+        "answers": "Anonymous",
+        "audio_filename": "1143.mp3",
+        "rating": 0
+    },
+    {
+        "id": 144,
+        "question_script": "What emergency service is called at sea?",
+        "answers": "Coastguard",
+        "audio_filename": "1144.mp3",
+        "rating": 0
+    },
+    {
+        "id": 145,
+        "question_script": "Name the month that falls between April and June?",
+        "answers": "May",
+        "audio_filename": "1145.mp3",
+        "rating": 0
+    },
+    {
+        "id": 146,
+        "question_script": "What crime has someone stealing from a shop committed?",
+        "answers": "Shoplifting",
+        "audio_filename": "1146.mp3",
+        "rating": 0
+    },
+    {
+        "id": 147,
+        "question_script": "There are two types of sporting contests: one is amateur; and other is?",
+        "answers": "Professional",
+        "audio_filename": "1147.mp3",
+        "rating": 0
+    },
+    {
+        "id": 148,
+        "question_script": "To cross over from one side of the river to another without using boat, what is usually required?",
+        "answers": "Bridge",
+        "audio_filename": "1148.mp3",
+        "rating": 0
+    },
+    {
+        "id": 149,
+        "question_script": "Where would you find a whale � tropical forest or ocean?",
+        "answers": "Ocean",
+        "audio_filename": "1149.mp3",
+        "rating": 0
+    },
+    {
+        "id": 150,
+        "question_script": "If a coat had a stain on it, where would you take it?",
+        "answers": "Dry cleaner�s",
+        "audio_filename": "1150.mp3",
+        "rating": 0
+    },
+    {
+        "id": 151,
+        "question_script": "What are the things that hens lay?",
+        "answers": "Eggs",
+        "audio_filename": "1151.mp3",
+        "rating": 0
+    },
+    {
+        "id": 152,
+        "question_script": "The people who protect the public from criminals are called?",
+        "answers": "Police",
+        "audio_filename": "1152.mp3",
+        "rating": 1
+    },
+    {
+        "id": 153,
+        "question_script": "On what geographical location would someone be living if their country is surrounded by water on all side?",
+        "answers": "island",
+        "audio_filename": "1153.mp3",
+        "rating": 2
+    },
+    {
+        "id": 154,
+        "question_script": "What general part of the day is known as dawn?",
+        "answers": "Sunrise or Morning time",
+        "audio_filename": "1154.mp3",
+        "rating": 5
+    },
+    {
+        "id": 155,
+        "question_script": "What are the people that plant food raise crop commonly known as?",
+        "answers": "Farmers",
+        "audio_filename": "1155.mp3",
+        "rating": 2
+    },
+    {
+        "id": 156,
+        "question_script": "If a button has come off a shirt, what would someone most likely use to put it back on?",
+        "answers": "Needle and thread",
+        "audio_filename": "1156.mp3",
+        "rating": 0
+    },
+    {
+        "id": 157,
+        "question_script": "What appliance do people use to keep their food cool and prevent it from spoiling?",
+        "answers": "fridge",
+        "audio_filename": "1157.mp3",
+        "rating": 5
+    },
+    {
+        "id": 158,
+        "question_script": "What do we call a period of 100 years?",
+        "answers": "Century",
+        "audio_filename": "1158.mp3",
+        "rating": 13
+    },
+    {
+        "id": 159,
+        "question_script": "What we call it when the moon completely blocks out the light from the sun?",
+        "answers": "A solar eclipse or an eclipse",
+        "audio_filename": "1159.mp3",
+        "rating": 0
+    },
+    {
+        "id": 160,
+        "question_script": "The eclipse of moon: Solar, Lunar?",
+        "answers": "The right answer is lunar",
+        "audio_filename": "1160.mp3",
+        "rating": 0
+    },
+    {
+        "id": 161,
+        "question_script": "What is money you owe called, debt or asset?",
+        "answers": "Debt",
+        "audio_filename": "1161.mp3",
+        "rating": 4
+    },
+    {
+        "id": 162,
+        "question_script": "If you have to owe, are you in debt or gain?",
+        "answers": "Debt",
+        "audio_filename": "1162.mp3",
+        "rating": 0
+    },
+    {
+        "id": 163,
+        "question_script": "How would most people travel to work each day, in big cities like Hong Kong, Tokyo and New York?",
+        "answers": "By public transportation",
+        "audio_filename": "1163.mp3",
+        "rating": 0
+    },
+    {
+        "id": 164,
+        "question_script": "Who would you consult to treat a fear of crowded places, a philosopher or a psychologist?",
+        "answers": "a psychologist",
+        "audio_filename": "1164.mp3",
+        "rating": 0
+    },
+    {
+        "id": 165,
+        "question_script": "What key mineral makes sea water different from fresh water?",
+        "answers": "Salt",
+        "audio_filename": "1165.mp3",
+        "rating": 1
+    },
+    {
+        "id": 166,
+        "question_script": "What is hematology related to?",
+        "answers": "Blood",
+        "audio_filename": "1166.mp3",
+        "rating": 9
+    },
+    {
+        "id": 167,
+        "question_script": "famous canal links the Mediterranean Sea with the Indian Ocean, is it the Corinth or Suez Canal?",
+        "answers": "Suez Canal",
+        "audio_filename": "1167.mp3",
+        "rating": 0
+    },
+    {
+        "id": 168,
+        "question_script": "What do we call the date a piece of work must be finish by?",
+        "answers": "Deadline or Due date",
+        "audio_filename": "1168.mp3",
+        "rating": 0
+    },
+    {
+        "id": 169,
+        "question_script": "What Dermatology specialized in?",
+        "answers": "Skin � Baldness & Hair",
+        "audio_filename": "1169.mp3",
+        "rating": 0
+    },
+    {
+        "id": 170,
+        "question_script": "If a figure is hexagonal, how many sides does it have?",
+        "answers": "Six",
+        "audio_filename": "1170.mp3",
+        "rating": 0
+    },
+    {
+        "id": 171,
+        "question_script": "What is the word for the place where rivers start?",
+        "answers": "Source",
+        "audio_filename": "1171.mp3",
+        "rating": 1
+    },
+    {
+        "id": 172,
+        "question_script": "What piece of equipment would you use to go diving in a sea � an aquaplane or an aqualung?",
+        "answers": "An aqualung",
+        "audio_filename": "1172.mp3",
+        "rating": 0
+    },
+    {
+        "id": 173,
+        "question_script": "A list of events placed in time order is usually described as what?",
+        "answers": "A chronology or a Timeline",
+        "audio_filename": "1173.mp3",
+        "rating": 1
+    },
+    {
+        "id": 174,
+        "question_script": "Which hospital department would you go for an X-ray � radiology or cardiology?",
+        "answers": "Radiology",
+        "audio_filename": "1174.mp3",
+        "rating": 0
+    },
+    {
+        "id": 175,
+        "question_script": "Where would you go to see an exhibition of sculptures?",
+        "answers": "Art gallery or Museum",
+        "audio_filename": "1175.mp3",
+        "rating": 0
+    },
+    {
+        "id": 176,
+        "question_script": "Would you measure volume of water in liters or kilos?",
+        "answers": "Liters",
+        "audio_filename": "1176.mp3",
+        "rating": 0
+    },
+    {
+        "id": 177,
+        "question_script": "What is the joint called where your hand is connected to your arm?",
+        "answers": "Wrist",
+        "audio_filename": "1177.mp3",
+        "rating": 0
+    },
+    {
+        "id": 178,
+        "question_script": "A manufacturing process releases poisonous gases. What is the most important safety measure for workers at this plant; ensuring good ventilation or appropriate footwear?",
+        "answers": "(Ensuring good) Ventilation",
+        "audio_filename": "1178.mp3",
+        "rating": 0
+    },
+    {
+        "id": 179,
+        "question_script": "What is vaccine used for?",
+        "answers": "Prevent disease",
+        "audio_filename": "1179.mp3",
+        "rating": 0
+    },
+    {
+        "id": 180,
+        "question_script": "What do you call equipment we use to look at stars?",
+        "answers": "Telescope",
+        "audio_filename": "1180.mp3",
+        "rating": 15
+    },
+    {
+        "id": 181,
+        "question_script": "What is the chemical name of Gold � Mg, Au or O2?",
+        "answers": "Au",
+        "audio_filename": "1181.mp3",
+        "rating": 0
+    },
+    {
+        "id": 182,
+        "question_script": "In which century was the automobile manufactured on a large scale?",
+        "answers": "20th Century",
+        "audio_filename": "1182.mp3",
+        "rating": 0
+    },
+    {
+        "id": 183,
+        "question_script": "Name a country located in North America?",
+        "answers": "USA or Canada",
+        "audio_filename": "1183.mp3",
+        "rating": 0
+    },
+    {
+        "id": 184,
+        "question_script": "Name a country located in the Southern hemisphere?",
+        "answers": "Australia or New Zealand,",
+        "audio_filename": "1184.mp3",
+        "rating": 0
+    },
+    {
+        "id": 185,
+        "question_script": "Which country is in the southern hemisphere, Australia or Canada?",
+        "answers": "Australia",
+        "audio_filename": "1185.mp3",
+        "rating": 0
+    },
+    {
+        "id": 186,
+        "question_script": "This work is due for submission, one month from 15th June. On what date is it to be submitted?",
+        "answers": "15th July",
+        "audio_filename": "1186.mp3",
+        "rating": 0
+    },
+    {
+        "id": 187,
+        "question_script": "What is the name of the instrument used to measure variations in temperature?",
+        "answers": "Thermometer",
+        "audio_filename": "1187.mp3",
+        "rating": 13
+    },
+    {
+        "id": 188,
+        "question_script": "Which section of the train timetable will tell you, what time the train leaves?",
+        "answers": "Departures",
+        "audio_filename": "1188.mp3",
+        "rating": 0
+    },
+    {
+        "id": 189,
+        "question_script": "What do we call the list of steps, which tells you to put something together?",
+        "answers": "Instructions",
+        "audio_filename": "1189.mp3",
+        "rating": 0
+    },
+    {
+        "id": 190,
+        "question_script": "Which is the longest: a decade, a millennium or a century?",
+        "answers": "A millennium",
+        "audio_filename": "1190.mp3",
+        "rating": 0
+    },
+    {
+        "id": 191,
+        "question_script": "What do we call a period of 1000 years?",
+        "answers": "Millennium",
+        "audio_filename": "1191.mp3",
+        "rating": 16
+    },
+    {
+        "id": 192,
+        "question_script": "What word is used for someone who watches a sport event?",
+        "answers": "Spectator",
+        "audio_filename": "1192.mp3",
+        "rating": 0
+    },
+    {
+        "id": 193,
+        "question_script": "What object will you use to climb up to the roof of the house?",
+        "answers": "Ladder",
+        "audio_filename": "1193.mp3",
+        "rating": 0
+    },
+    {
+        "id": 194,
+        "question_script": "What do we call the organ in our chest that we need to breath?",
+        "answers": "Lungs",
+        "audio_filename": "1194.mp3",
+        "rating": 0
+    },
+    {
+        "id": 195,
+        "question_script": "What is the collective term for cows and bulls, especially on the farm?",
+        "answers": "Cattle",
+        "audio_filename": "1195.mp3",
+        "rating": 0
+    },
+    {
+        "id": 196,
+        "question_script": "If something such as fabric or medicine is artificially made, what do we say it is?",
+        "answers": "Synthetic",
+        "audio_filename": "1196.mp3",
+        "rating": 0
+    },
+    {
+        "id": 197,
+        "question_script": "What do we call the alphabetical list, at the end of the book that tells you where to find specific information?",
+        "answers": "index",
+        "audio_filename": "1197.mp3",
+        "rating": 35
+    },
+    {
+        "id": 198,
+        "question_script": "In the animal kingdom, is the purpose of camouflage to attract a mate, to find food or to hide?",
+        "answers": "To hide",
+        "audio_filename": "1198.mp3",
+        "rating": 0
+    },
+    {
+        "id": 199,
+        "question_script": "What does the term otolaryngology mean?",
+        "answers": "Ear, Nose & Throat",
+        "audio_filename": "1199.mp3",
+        "rating": 0
+    },
+    {
+        "id": 200,
+        "question_script": "What do ophthalmologist specialize in?",
+        "answers": "Eye operations",
+        "audio_filename": "1200.mp3",
+        "rating": 5
+    },
+    {
+        "id": 201,
+        "question_script": "Which major branch of science deals with classification of human beings?",
+        "answers": "Biology",
+        "audio_filename": "1201.mp3",
+        "rating": 0
+    },
+    {
+        "id": 202,
+        "question_script": "What is Orthopedic (orthopaedic) relates to?",
+        "answers": "Joints, Knee, bones",
+        "audio_filename": "1202.mp3",
+        "rating": 0
+    },
+    {
+        "id": 203,
+        "question_script": "In the doctoral course of 1-5 years, when is the thesis?",
+        "answers": "5th year",
+        "audio_filename": "1203.mp3",
+        "rating": 0
+    },
+    {
+        "id": 204,
+        "question_script": "How many wheels does a tricycle have?",
+        "answers": "3",
+        "audio_filename": "1204.mp3",
+        "rating": 14
+    },
+    {
+        "id": 205,
+        "question_script": "If you are lost in city, what should you buy?",
+        "answers": "Map",
+        "audio_filename": "1205.mp3",
+        "rating": 17
+    },
+    {
+        "id": 206,
+        "question_script": "What is the company earning money?",
+        "answers": "Profit",
+        "audio_filename": "1206.mp3",
+        "rating": 0
+    },
+    {
+        "id": 207,
+        "question_script": "Which is first invented: print press, computer or mobile phone?",
+        "answers": "Print press",
+        "audio_filename": "1207.mp3",
+        "rating": 0
+    },
+    {
+        "id": 208,
+        "question_script": "Where to see the scientific instruments?",
+        "answers": "Laboratory",
+        "audio_filename": "1208.mp3",
+        "rating": 0
+    },
+    {
+        "id": 209,
+        "question_script": "Where is the lunar map?",
+        "answers": "Moon",
+        "audio_filename": "1209.mp3",
+        "rating": 0
+    },
+    {
+        "id": 210,
+        "question_script": "What is first stage of master�s degree and bachelor�s?",
+        "answers": "Lodge application",
+        "audio_filename": "1210.mp3",
+        "rating": 0
+    },
+    {
+        "id": 211,
+        "question_script": "Camel lives in which habitat?",
+        "answers": "Desert",
+        "audio_filename": "1211.mp3",
+        "rating": 21
+    },
+    {
+        "id": 212,
+        "question_script": "Km and Kg, Which is to measure length or distance?",
+        "answers": "KM",
+        "audio_filename": "1212.mp3",
+        "rating": 0
+    },
+    {
+        "id": 213,
+        "question_script": "Miles and KMs are used to measure distance or liquid?",
+        "answers": "Distance",
+        "audio_filename": "1213.mp3",
+        "rating": 0
+    },
+    {
+        "id": 214,
+        "question_script": "Where does solar power generate energy?",
+        "answers": "Sun",
+        "audio_filename": "1214.mp3",
+        "rating": 7
+    },
+    {
+        "id": 215,
+        "question_script": "Windmill is used for?",
+        "answers": "Electricity",
+        "audio_filename": "1215.mp3",
+        "rating": 0
+    },
+    {
+        "id": 216,
+        "question_script": "What is the safety device of the plane?",
+        "answers": "seat belt",
+        "audio_filename": "1216.mp3",
+        "rating": 8
+    },
+    {
+        "id": 217,
+        "question_script": "When you rub 2 things, what will happen?",
+        "answers": "Friction",
+        "audio_filename": "1217.mp3",
+        "rating": 4
+    },
+    {
+        "id": 218,
+        "question_script": "After more work, you will be exhausted or refreshed?",
+        "answers": "Exhausted",
+        "audio_filename": "1218.mp3",
+        "rating": 5
+    },
+    {
+        "id": 219,
+        "question_script": "What is it when two stones are rubbed?",
+        "answers": "Fire",
+        "audio_filename": "1219.mp3",
+        "rating": 0
+    },
+    {
+        "id": 220,
+        "question_script": "When earth and universe come to same line what we call it?",
+        "answers": "Horizon",
+        "audio_filename": "1220.mp3",
+        "rating": 0
+    },
+    {
+        "id": 221,
+        "question_script": "The point where the earth and sky seem to meet: Horizon, Quarter, Hemisphere?",
+        "answers": "Horizon",
+        "audio_filename": "1221.mp3",
+        "rating": 0
+    },
+    {
+        "id": 222,
+        "question_script": "A woman was checking books on the bookshelf in a book store. What she is doing?",
+        "answers": "Searching BOOK",
+        "audio_filename": "1222.mp3",
+        "rating": 0
+    },
+    {
+        "id": 223,
+        "question_script": "Gravity comes in physics or biology?",
+        "answers": "Physics",
+        "audio_filename": "1223.mp3",
+        "rating": 4
+    },
+    {
+        "id": 224,
+        "question_script": "Which is the largest living bird?",
+        "answers": "Ostrich",
+        "audio_filename": "1224.mp3",
+        "rating": 1
+    },
+    {
+        "id": 225,
+        "question_script": "The national animal of India is the: Tiger, Lion, Peacock, Leopard?",
+        "answers": "Tiger",
+        "audio_filename": "1225.mp3",
+        "rating": 0
+    },
+    {
+        "id": 226,
+        "question_script": "The national fruit of India is the Mango, Lotus fruit, Guava, Papaya?",
+        "answers": "Mango",
+        "audio_filename": "1226.mp3",
+        "rating": 0
+    },
+    {
+        "id": 227,
+        "question_script": "Ram had 342 coins in his collection. How would you write 342, Three four two, Three forty two, Three hundred forty two, Three hundred four two?",
+        "answers": "C",
+        "audio_filename": "1227.mp3",
+        "rating": 0
+    },
+    {
+        "id": 228,
+        "question_script": "Who is the president of USA, Manmohan Singh, Haseena sheikh, Barack Obama?",
+        "answers": "Barack Obama",
+        "audio_filename": "1228.mp3",
+        "rating": 0
+    },
+    {
+        "id": 229,
+        "question_script": "In what season do apples most commonly mature?",
+        "answers": "Autumn",
+        "audio_filename": "1229.mp3",
+        "rating": 0
+    },
+    {
+        "id": 230,
+        "question_script": "Which is the largest fish in the world, whale or Shark?",
+        "answers": "Whale",
+        "audio_filename": "1230.mp3",
+        "rating": 0
+    },
+    {
+        "id": 231,
+        "question_script": "Which is the tallest animal on the earth, giraffe or zebra?",
+        "answers": "Giraffe",
+        "audio_filename": "1231.mp3",
+        "rating": 0
+    },
+    {
+        "id": 232,
+        "question_script": "Square is to cube as circle is to �?�. . Round, Ball, Pie, Sphere?",
+        "answers": "sphere",
+        "audio_filename": "1232.mp3",
+        "rating": 0
+    },
+    {
+        "id": 233,
+        "question_script": "What do most children ride on to go to school, School bus, car, taxi, motorcycle?",
+        "answers": "School bus",
+        "audio_filename": "1233.mp3",
+        "rating": 0
+    },
+    {
+        "id": 234,
+        "question_script": "What farm animal gives us milk to drink, Cow or Buffalo?",
+        "answers": "Cow",
+        "audio_filename": "1234.mp3",
+        "rating": 0
+    },
+    {
+        "id": 235,
+        "question_script": "In America, what do people call it when children go out to play during a break at school?",
+        "answers": "Recess",
+        "audio_filename": "1235.mp3",
+        "rating": 0
+    },
+    {
+        "id": 236,
+        "question_script": "If you wanted to dig a hole, which of the following would you be most likely to use, Spade, spanner, hammer, hoe?",
+        "answers": "Spade",
+        "audio_filename": "1236.mp3",
+        "rating": 0
+    },
+    {
+        "id": 237,
+        "question_script": "On a clock, if the big hand is on 12 and the little hand is on 3 what time would it be. A) 12 o�clock . B)3 o� clock . C) 5 o� clock . D)9 o�clock?",
+        "answers": "3 o� clock",
+        "audio_filename": "1237.mp3",
+        "rating": 0
+    },
+    {
+        "id": 238,
+        "question_script": "What vehicle runs on a track and blows a whistle, Car, train, airplane, helicopter?",
+        "answers": "train",
+        "audio_filename": "1238.mp3",
+        "rating": 0
+    },
+    {
+        "id": 239,
+        "question_script": "What are doctors and lawyers called what they do?",
+        "answers": "Practice",
+        "audio_filename": "1239.mp3",
+        "rating": 0
+    },
+    {
+        "id": 240,
+        "question_script": "How many players are involved in the football?",
+        "answers": "11",
+        "audio_filename": "1240.mp3",
+        "rating": 0
+    },
+    {
+        "id": 241,
+        "question_script": "Who takes care of the sheep?",
+        "answers": "Shepherd",
+        "audio_filename": "1241.mp3",
+        "rating": 0
+    },
+    {
+        "id": 242,
+        "question_script": "Which month has 28 days?",
+        "answers": "All",
+        "audio_filename": "1242.mp3",
+        "rating": 0
+    },
+    {
+        "id": 243,
+        "question_script": "Which is the highest mountain in the world?",
+        "answers": "Mount Everest",
+        "audio_filename": "1243.mp3",
+        "rating": 0
+    },
+    {
+        "id": 244,
+        "question_script": "Which is the national bird of India, Peacock, Parrot?",
+        "answers": "Peacock",
+        "audio_filename": "1244.mp3",
+        "rating": 0
+    },
+    {
+        "id": 245,
+        "question_script": "What is the female gender of peacock?",
+        "answers": "Peahen",
+        "audio_filename": "1245.mp3",
+        "rating": 0
+    },
+    {
+        "id": 246,
+        "question_script": "In the following question choose one word that best describes the meaning of the given word. Ghastly: terrible, pleasant, pretty, sanction?",
+        "answers": "Terrible",
+        "audio_filename": "1246.mp3",
+        "rating": 0
+    },
+    {
+        "id": 247,
+        "question_script": "What is the antonym of anxiety. A)scare . B)calmness . C)leisure . D)apprehension?",
+        "answers": "B. calmness",
+        "audio_filename": "1247.mp3",
+        "rating": 0
+    },
+    {
+        "id": 248,
+        "question_script": "What is the cry of lion called?",
+        "answers": "Roar",
+        "audio_filename": "1248.mp3",
+        "rating": 0
+    },
+    {
+        "id": 249,
+        "question_script": "What is term Neuro-Psych?",
+        "answers": "Brain injury or mental heal",
+        "audio_filename": "1249.mp3",
+        "rating": 0
+    },
+    {
+        "id": 250,
+        "question_script": "A long depression in the surface of the land that usually contains a river is called?",
+        "answers": "Valley",
+        "audio_filename": "1250.mp3",
+        "rating": 0
+    },
+    {
+        "id": 251,
+        "question_script": "What is 3/4th of percentage called as?",
+        "answers": "0.75",
+        "audio_filename": "1251.mp3",
+        "rating": 7
+    },
+    {
+        "id": 252,
+        "question_script": "Which geometrical shapes are circumference, radius, and diameter form?",
+        "answers": "Circle",
+        "audio_filename": "1252.mp3",
+        "rating": 4
+    },
+    {
+        "id": 253,
+        "question_script": "How many years are in a decade?",
+        "answers": "10 Years",
+        "audio_filename": "1253.mp3",
+        "rating": 27
+    },
+    {
+        "id": 254,
+        "question_script": "Whenever a person goes to an interview, would he be in an enthusiastic mood or sad mood?",
+        "answers": "Enthusiastic mood",
+        "audio_filename": "1254.mp3",
+        "rating": 16
+    },
+    {
+        "id": 255,
+        "question_script": "What special document do most people carry during international travels?",
+        "answers": "Passport",
+        "audio_filename": "1255.mp3",
+        "rating": 0
+    },
+    {
+        "id": 256,
+        "question_script": "What would you call one half of the percentage?",
+        "answers": "0.005",
+        "audio_filename": "1256.mp3",
+        "rating": 0
+    },
+    {
+        "id": 257,
+        "question_script": "Which Animal is not a mammal, Butterfly, cow or Goat?",
+        "answers": "Butterfly",
+        "audio_filename": "1257.mp3",
+        "rating": 22
+    },
+    {
+        "id": 258,
+        "question_script": "How many years you study for an Undergraduate program?",
+        "answers": "4 years",
+        "audio_filename": "1258.mp3",
+        "rating": 0
+    },
+    {
+        "id": 259,
+        "question_script": "If you forget the way what will you buy to find your destination?",
+        "answers": "A map",
+        "audio_filename": "1259.mp3",
+        "rating": 0
+    },
+    {
+        "id": 260,
+        "question_script": "How many years you study for an Undergraduate program?",
+        "answers": "4 years",
+        "audio_filename": "1260.mp3",
+        "rating": 0
+    },
+    {
+        "id": 261,
+        "question_script": "If something is POST, then what does Post mean?",
+        "answers": "Post means after.",
+        "audio_filename": "1261.mp3",
+        "rating": 1
+    },
+    {
+        "id": 262,
+        "question_script": "In hospitals and other shops who gives medicine?",
+        "answers": "Pharmacist",
+        "audio_filename": "1262.mp3",
+        "rating": 0
+    },
+    {
+        "id": 263,
+        "question_script": "In which branch of science, periodic table comes?",
+        "answers": "Chemistry",
+        "audio_filename": "1263.mp3",
+        "rating": 2
+    },
+    {
+        "id": 264,
+        "question_script": "When something comes at halt, what does this mean?",
+        "answers": "Stop",
+        "audio_filename": "1264.mp3",
+        "rating": 0
+    },
+    {
+        "id": 265,
+        "question_script": "After secondary education, students can study in colleges as well as�?�?",
+        "answers": "Universities",
+        "audio_filename": "1265.mp3",
+        "rating": 0
+    },
+    {
+        "id": 266,
+        "question_script": "What does king or queen wear on their head at official ceremonies?",
+        "answers": "crown",
+        "audio_filename": "1266.mp3",
+        "rating": 0
+    },
+    {
+        "id": 267,
+        "question_script": "What are winter, spring, summer and autumn?",
+        "answers": "Seasons",
+        "audio_filename": "1267.mp3",
+        "rating": 0
+    },
+    {
+        "id": 268,
+        "question_script": "What is the sweet food produced by bees?",
+        "answers": "Honey",
+        "audio_filename": "1268.mp3",
+        "rating": 14
+    },
+    {
+        "id": 269,
+        "question_script": "An older unmarried woman?",
+        "answers": "Spinster",
+        "audio_filename": "1269.mp3",
+        "rating": 0
+    },
+    {
+        "id": 270,
+        "question_script": "The one who has no money: Pauper or Beggar?",
+        "answers": "Pauper",
+        "audio_filename": "1270.mp3",
+        "rating": 0
+    },
+    {
+        "id": 271,
+        "question_script": "A government publication relating to order, notification, etc: Gazette, Journal, Magazine?",
+        "answers": "Gazette",
+        "audio_filename": "1271.mp3",
+        "rating": 1
+    },
+    {
+        "id": 272,
+        "question_script": "A vehicle to carry dead bodies?",
+        "answers": "Hearse",
+        "audio_filename": "1272.mp3",
+        "rating": 0
+    },
+    {
+        "id": 273,
+        "question_script": "A grass eating animal: Carnivorous, Herbivorous?",
+        "answers": "Herbivorous",
+        "audio_filename": "1273.mp3",
+        "rating": 0
+    },
+    {
+        "id": 274,
+        "question_script": "An animal that eats any kind of food: Omnivorous, Carnivorous, Herbivorous?",
+        "answers": "Omnivorous",
+        "audio_filename": "1274.mp3",
+        "rating": 0
+    },
+    {
+        "id": 275,
+        "question_script": "Things of different nature: Homogenous, heterogeneous?",
+        "answers": "Heterogeneous",
+        "audio_filename": "1275.mp3",
+        "rating": 0
+    },
+    {
+        "id": 276,
+        "question_script": "Someone who is fond of entertaining guests: Host, Hospitable?",
+        "answers": "Hospitable",
+        "audio_filename": "1276.mp3",
+        "rating": 0
+    },
+    {
+        "id": 277,
+        "question_script": "A serpent with many heads?",
+        "answers": "Hydra",
+        "audio_filename": "1277.mp3",
+        "rating": 0
+    },
+    {
+        "id": 278,
+        "question_script": "One who pretends to be what he is not?",
+        "answers": "Hypocrite",
+        "audio_filename": "1278.mp3",
+        "rating": 0
+    },
+    {
+        "id": 279,
+        "question_script": "Worship of idols?",
+        "answers": "Idolatry",
+        "audio_filename": "1279.mp3",
+        "rating": 0
+    },
+    {
+        "id": 280,
+        "question_script": "A handwriting that cannot be read?",
+        "answers": "illegible",
+        "audio_filename": "1280.mp3",
+        "rating": 0
+    },
+    {
+        "id": 281,
+        "question_script": "A sound that cannot be heard: Audile, Inaudible?",
+        "answers": "Inaudible",
+        "audio_filename": "1281.mp3",
+        "rating": 0
+    },
+    {
+        "id": 282,
+        "question_script": "Incapable of being burnt?",
+        "answers": "Incombustible",
+        "audio_filename": "1282.mp3",
+        "rating": 0
+    },
+    {
+        "id": 283,
+        "question_script": "Something that cannot be believed?",
+        "answers": "Incredible",
+        "audio_filename": "1283.mp3",
+        "rating": 0
+    },
+    {
+        "id": 284,
+        "question_script": "Something that cannot be cured?",
+        "answers": "Incurable",
+        "audio_filename": "1284.mp3",
+        "rating": 0
+    },
+    {
+        "id": 285,
+        "question_script": "Something that cannot be avoided?",
+        "answers": "Inevitable",
+        "audio_filename": "1285.mp3",
+        "rating": 0
+    },
+    {
+        "id": 286,
+        "question_script": "Something that cannot be explained?",
+        "answers": "inexplicable",
+        "audio_filename": "1286.mp3",
+        "rating": 0
+    },
+    {
+        "id": 287,
+        "question_script": "The act of killing an infant: Infanticide, Homicide?",
+        "answers": "Infanticide",
+        "audio_filename": "1287.mp3",
+        "rating": 0
+    },
+    {
+        "id": 288,
+        "question_script": "That cannot be satisfies?",
+        "answers": "Insatiable",
+        "audio_filename": "1288.mp3",
+        "rating": 0
+    },
+    {
+        "id": 289,
+        "question_script": "That kills insects: Insecticide, Pesticide?",
+        "answers": "Insecticide",
+        "audio_filename": "1289.mp3",
+        "rating": 0
+    },
+    {
+        "id": 290,
+        "question_script": "Something that is not applicable?",
+        "answers": "Irrelevant",
+        "audio_filename": "1290.mp3",
+        "rating": 0
+    },
+    {
+        "id": 291,
+        "question_script": "A one who travels from place to place?",
+        "answers": "Itinerant",
+        "audio_filename": "1291.mp3",
+        "rating": 0
+    },
+    {
+        "id": 292,
+        "question_script": "Anything which is related to youth and young?",
+        "answers": "Juvenile",
+        "audio_filename": "1292.mp3",
+        "rating": 0
+    },
+    {
+        "id": 293,
+        "question_script": "An animal of Australia with great leaping power?",
+        "answers": "Kangaroo",
+        "audio_filename": "1293.mp3",
+        "rating": 0
+    },
+    {
+        "id": 294,
+        "question_script": "One who know many languages: Linguist, Bilingual?",
+        "answers": "Linguist",
+        "audio_filename": "1294.mp3",
+        "rating": 0
+    },
+    {
+        "id": 295,
+        "question_script": "Animals which give milk: Reptiles, Mammals?",
+        "answers": "Mammals",
+        "audio_filename": "1295.mp3",
+        "rating": 0
+    },
+    {
+        "id": 296,
+        "question_script": "A person who die for his country: Martyr, Soldier?",
+        "answers": "martyr",
+        "audio_filename": "1296.mp3",
+        "rating": 0
+    },
+    {
+        "id": 297,
+        "question_script": "One for whom the money is the most important thing?",
+        "answers": "Materialistic",
+        "audio_filename": "1297.mp3",
+        "rating": 0
+    },
+    {
+        "id": 298,
+        "question_script": "A cinema show which is held in the afternoons?",
+        "answers": "Matinee",
+        "audio_filename": "1298.mp3",
+        "rating": 0
+    },
+    {
+        "id": 299,
+        "question_script": "Morning prayer in church?",
+        "answers": "Matin",
+        "audio_filename": "1299.mp3",
+        "rating": 0
+    },
+    {
+        "id": 300,
+        "question_script": "Belonging to the middle ages?",
+        "answers": "Medieval",
+        "audio_filename": "1300.mp3",
+        "rating": 0
+    },
+    {
+        "id": 301,
+        "question_script": "Very particular about very small details?",
+        "answers": "Meticulous",
+        "audio_filename": "1301.mp3",
+        "rating": 0
+    },
+    {
+        "id": 302,
+        "question_script": "Someone who moves from one place to another: Migratory, Immigrant?",
+        "answers": "Migratory",
+        "audio_filename": "1302.mp3",
+        "rating": 0
+    },
+    {
+        "id": 303,
+        "question_script": "A person who does not believe in the institution of marriages: Bachelor, Misogamist?",
+        "answers": "Misogamist",
+        "audio_filename": "1303.mp3",
+        "rating": 0
+    },
+    {
+        "id": 304,
+        "question_script": "A person who hates woman: Misogamist, Misogynist?",
+        "answers": "Misogynist",
+        "audio_filename": "1304.mp3",
+        "rating": 0
+    },
+    {
+        "id": 305,
+        "question_script": "A government by a king or a queen: Monarchy, Monocracy?",
+        "answers": "Monarchy",
+        "audio_filename": "1305.mp3",
+        "rating": 0
+    },
+    {
+        "id": 306,
+        "question_script": "The practice of having one wife or husband: Polygamy, Monogamy?",
+        "answers": "Monogamy",
+        "audio_filename": "1306.mp3",
+        "rating": 0
+    },
+    {
+        "id": 307,
+        "question_script": "Custom of many husbands: Polygamy, Monogamy, Polyandry?",
+        "answers": "Polygamy",
+        "audio_filename": "1307.mp3",
+        "rating": 0
+    },
+    {
+        "id": 308,
+        "question_script": "One who is a new comer?",
+        "answers": "Neophyte",
+        "audio_filename": "1308.mp3",
+        "rating": 0
+    },
+    {
+        "id": 309,
+        "question_script": "Person publically authorized to draw up or attest contracts etc?",
+        "answers": "Notary",
+        "audio_filename": "1309.mp3",
+        "rating": 0
+    },
+    {
+        "id": 310,
+        "question_script": "One who is new to a trade or profession?",
+        "answers": "Novice",
+        "audio_filename": "1310.mp3",
+        "rating": 0
+    },
+    {
+        "id": 311,
+        "question_script": "Article of food rich in nutrition?",
+        "answers": "Nutritive",
+        "audio_filename": "1311.mp3",
+        "rating": 0
+    },
+    {
+        "id": 312,
+        "question_script": "A study of ocean?",
+        "answers": "Oceanography",
+        "audio_filename": "1312.mp3",
+        "rating": 0
+    },
+    {
+        "id": 313,
+        "question_script": "All powerful, possessing complete power and authority?",
+        "answers": "Omnipotent",
+        "audio_filename": "1313.mp3",
+        "rating": 0
+    },
+    {
+        "id": 314,
+        "question_script": "A one who is presents everywhere?",
+        "answers": "Omnipresent",
+        "audio_filename": "1314.mp3",
+        "rating": 0
+    },
+    {
+        "id": 315,
+        "question_script": "A one who knows everything?",
+        "answers": "Omniscient",
+        "audio_filename": "1315.mp3",
+        "rating": 0
+    },
+    {
+        "id": 316,
+        "question_script": "One who look at the bright side of the thing: Optimist, Pessimist?",
+        "answers": "Optimist",
+        "audio_filename": "1316.mp3",
+        "rating": 0
+    },
+    {
+        "id": 317,
+        "question_script": "One who looks on the dark side of things: Pessimist, Optimist?",
+        "answers": "Pessimist",
+        "audio_filename": "1317.mp3",
+        "rating": 0
+    },
+    {
+        "id": 318,
+        "question_script": "A person without mother and father?",
+        "answers": "Orphan",
+        "audio_filename": "1318.mp3",
+        "rating": 0
+    },
+    {
+        "id": 319,
+        "question_script": "A place where orphans live?",
+        "answers": "Orphanage",
+        "audio_filename": "1319.mp3",
+        "rating": 0
+    },
+    {
+        "id": 320,
+        "question_script": "One who believe in traditional values?",
+        "answers": "Orthodox",
+        "audio_filename": "1320.mp3",
+        "rating": 0
+    },
+    {
+        "id": 321,
+        "question_script": "A supposed cure for all diseases or problems?",
+        "answers": "Panacea",
+        "audio_filename": "1321.mp3",
+        "rating": 0
+    },
+    {
+        "id": 322,
+        "question_script": "Study of disease: Pathology, Biology?",
+        "answers": "Pathology",
+        "audio_filename": "1322.mp3",
+        "rating": 0
+    },
+    {
+        "id": 323,
+        "question_script": "Killer of one�s own father: Patricide, Homicide?",
+        "answers": "Patricide",
+        "audio_filename": "1323.mp3",
+        "rating": 0
+    },
+    {
+        "id": 324,
+        "question_script": "Properties inherited from one�s father?",
+        "answers": "Patrimony",
+        "audio_filename": "1324.mp3",
+        "rating": 0
+    },
+    {
+        "id": 325,
+        "question_script": "One who loves his/ her country: Patriot, terrorist?",
+        "answers": "Patriot",
+        "audio_filename": "1325.mp3",
+        "rating": 0
+    },
+    {
+        "id": 326,
+        "question_script": "Payment made in consideration of past service?",
+        "answers": "Pension",
+        "audio_filename": "1326.mp3",
+        "rating": 0
+    },
+    {
+        "id": 327,
+        "question_script": "Lover of mankind?",
+        "answers": "Philanthropist",
+        "audio_filename": "1327.mp3",
+        "rating": 0
+    },
+    {
+        "id": 328,
+        "question_script": "Study of stamp collection: Philately, numismatics?",
+        "answers": "Philately",
+        "audio_filename": "1328.mp3",
+        "rating": 0
+    },
+    {
+        "id": 329,
+        "question_script": "Study of words and their roots?",
+        "answers": "Philology",
+        "audio_filename": "1329.mp3",
+        "rating": 0
+    },
+    {
+        "id": 330,
+        "question_script": "The study of sound: Phonetics, Acoustics, all of the above?",
+        "answers": "All above",
+        "audio_filename": "1330.mp3",
+        "rating": 0
+    },
+    {
+        "id": 331,
+        "question_script": "The study of the body?",
+        "answers": "Physiology",
+        "audio_filename": "1331.mp3",
+        "rating": 0
+    }
+]
