@@ -88,7 +88,8 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
         var searchKeyword = $("#searchKeywords").val();
         var sortByPro = $("#search_by").children("option:selected").val();
         //searchKeyword.match(/\S+/g) || []
-
+        var found = qArray;
+        
         //alert("start search >>>>> "+searchKeyword);
         if (searchKeyword.length != 0) {
             found = findout(qArray, "content", searchKeyword, sortByPro);
