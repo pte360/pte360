@@ -1,8 +1,8 @@
-const loadContent = (loadQuestion, showResult, hideResult, qArray, localStorageVariableName) => {
+const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, localStorageVariableName) => {
     //Get data
     var jsonURL = "data.json";
     var questionIndex = 0;
-    var visited;
+    // var visited;
     var searchKeys = [];
     //get visited quize items
     if (localStorage.getItem(localStorageVariableName)) {
