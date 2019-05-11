@@ -9,26 +9,25 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
         visited = JSON.parse(localStorage.getItem(localStorageVariableName))
     }
 
-    var sortByPro = $("#search_by").children("option:selected").val();
+    var sortByPro = $("#sort_by").children("option:selected").val();
     //Consruct the select  menu
     $.getJSON(jsonURL, function (data) {
-
-
         qArray = data;
+        buildQuizzSelect(data, visited, localStorageVariableName, sortByPro);
 
-        buildQuizzSelect(data, visited , localStorageVariableName, sortByPro);
-        /*
-        $.each(data, function (index, value) {
-            // APPEND OR INSERT DATA TO SELECT ELEMENT.				
-            var optionClass = "";
-            if (visited.includes(value.id)) optionClass = "visited";
-            $('#samples').append('<option value="' + index + '" class="' + optionClass + '">[' + value.id + '] </option>');
+        $("#search").click(function (event) {
+            qArray = data;
+            var searchKeyword = $("#searchKeywords").val();
+            var sortByPro = $("#sort_by").children("option:selected").val();
+           
+            if (searchKeyword.length != 0) {
+                qArray = findout(qArray, "content", searchKeyword, sortByPro);
+            }
+            //alert("Array length = " + qArray.length + " , Sort By = " + sortByPro);
+            buildQuizzSelect(qArray, visited, localStorageVariableName, sortByPro);
+    
         });
 
-        // Initialize Quetion area into question index zero 
-        questionIndex = 0;
-        loadQuestion(qArray, questionIndex, localStorageVariableName);
-        */
     });
 
     // SHOW SELECTED VALUE.
@@ -36,9 +35,7 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
         questionIndex = this.options[this.selectedIndex].index;
         loadQuestion(qArray, questionIndex, localStorageVariableName);
         //If result shown swap 
-        if ($('#result:visible').length) { $('#show_answer').trigger('click'); }
-        //$("#result").hide();
-        //$('#show_answer').text('SHOW ANSWERS');
+        if ($('#result:visible').length) { $('#show_answer').trigger('click'); }    
     });
 
     $("#next").click(function () {
@@ -59,13 +56,9 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
 
     // SHOW ANSWERS 
     $("#show_answer").click(function (event) {
-        //questionIndex = $("#samples").options[$("#samples").selectedIndex].index;
-        //var questionIndex = $("#samples").selectedIndex;
-        //alert(questionIndex);
         var id = qArray[questionIndex].id;
         //visited 
         item_visited(id, visited, localStorageVariableName);
-
         if ($('#result:visible').length) {
 
             hideResult(qArray, questionIndex);
@@ -83,61 +76,26 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
     });
 
 
-    $("#search").click(function (event) {
-
-        var searchKeyword = $("#searchKeywords").val();
-        var sortByPro = $("#search_by").children("option:selected").val();
-        //searchKeyword.match(/\S+/g) || []
-        var found = qArray;
-
-        //alert("start search >>>>> "+searchKeyword);
-        if (searchKeyword.length != 0) {
-            found = findout(qArray, "content", searchKeyword, sortByPro);
-        }
-        alert("Array length = "+found.length+" , Sort By = "+sortByPro );
-        buildQuizzSelect(found, visited, localStorageVariableName, sortByPro);
-
-    });
+ 
 
     $("#reset").click(function (event) {
         $("#searchKeywords").val("");
-
-        var sortByPro = $("#search_by").children("option:selected").val();
-
+        var sortByPro = $("#sort_by").children("option:selected").val();
         buildQuizzSelect(qArray, visited, localStorageVariableName, sortByPro);
-
     });
-
-
-
-
     return 1;
 }
-
-/*
-function serach(objArray, key, value){
-    var foundArray = [];
-
-    $.each(objArray, function (index, item) {
-        // APPEND OR INSERT DATA TO SELECT ELEMENT.				
-        if(item[key].includes(value)) foundArray.push(item);
-       
-    });
-
-    return foundArray;
-}
-*/
 
 function buildQuizzSelect(data, visited, localStorageVariableName, sortByPro) {
 
     $('#samples').html("");
-    data.sort(sortBy(sortByPro));
+    data.sort(orderBy);
 
     $.each(data, function (index, value) {
         // APPEND OR INSERT DATA TO SELECT ELEMENT.				
         var optionClass = "";
         if (visited.includes(value.id)) optionClass = "visited";
-        $('#samples').append('<option value="' + index + '" class="' + optionClass + '">[' + value.id + '] </option>');
+        $('#samples').append('<option value="' + value.id  + '" class="' + optionClass + '">[' + value.id + '] </option>');
     });
 
     // Initialize Quetion area into question index zero 
@@ -161,22 +119,15 @@ function item_visited(id, visited, visitedQuiz) {
 
 function findout(objArray, key, value, sortByPro) {
     var foundArray = [];
-
     var searchKeywordSplit = value.trim().split(/\s+/);
     var searchKeyword = searchKeywordSplit.join("|");
     var regex = new RegExp(searchKeyword, "i");
 
-    //alert(searchKeyword)
-
     $.each(objArray, function (index, item) {
-        // APPEND OR INSERT DATA TO SELECT ELEMENT.				
-        //if (item[key].includes(value)) foundArray.push(item);
-
         if (regex.test(item[key])) foundArray.push(item);
-
     });
 
-    foundArray.sort(sortBy(sortByPro));
+    foundArray = foundArray.sort(orderBy);
 
     return foundArray;
 }
@@ -187,6 +138,15 @@ function sortBy(prop) {
     return function (a, b) {
         var aVal = a[prop];
         var bVal = b[prop];
+        alert(aVal + " <<" + prop + ">> " + bVal)
         return ((aVal < bVal) ? -1 : ((aVal > bVal) ? 1 : 0));
     }
-}  
+}
+
+function orderBy(a, b) {
+    var prop = $("#sort_by").children("option:selected").val();
+    var aVal = a[prop];
+    var bVal = b[prop];
+    //alert(aVal + " <<" + prop + ">> " + bVal)
+    return ((aVal < bVal) ? -1 : ((aVal > bVal) ? 1 : 0));
+}
