@@ -13,7 +13,7 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
     //Consruct the select  menu
     $.getJSON(jsonURL, function (data) {
         qArray = data;
-        buildQuizzSelect(data, visited, localStorageVariableName, sortByPro);
+        buildQuizzSelect(data, visited, localStorageVariableName);
 
         $("#search").click(function (event) {
             qArray = data;
@@ -24,8 +24,21 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
                 qArray = findout(qArray, "content", searchKeyword, sortByPro);
             }
             //alert("Array length = " + qArray.length + " , Sort By = " + sortByPro);
-            buildQuizzSelect(qArray, visited, localStorageVariableName, sortByPro);
+            if(qArray.length<1){
+                alert("No search result found for "+searchKeyword);
+            }else{
+                buildQuizzSelect(qArray, visited, localStorageVariableName);
+            }         
     
+        });
+
+        $("#reset").click(function (event) {
+            qArray = data;
+            $("#searchKeywords").val("");
+            $("#sort_by").val($("#sort_by option:first").val());
+            $("#sort_type").val($("#sort_type option:first").val());
+
+            buildQuizzSelect(qArray, visited, localStorageVariableName);
         });
 
     });
@@ -78,24 +91,21 @@ const loadContent = (loadQuestion, showResult, hideResult, qArray, visited, loca
 
  
 
-    $("#reset").click(function (event) {
-        $("#searchKeywords").val("");
-        var sortByPro = $("#sort_by").children("option:selected").val();
-        buildQuizzSelect(qArray, visited, localStorageVariableName, sortByPro);
-    });
+   
     return 1;
 }
 
-function buildQuizzSelect(data, visited, localStorageVariableName, sortByPro) {
+function buildQuizzSelect(data, visited, localStorageVariableName) {
 
     $('#samples').html("");
     data.sort(orderBy);
 
     $.each(data, function (index, value) {
-        // APPEND OR INSERT DATA TO SELECT ELEMENT.				
+        // APPEND OR INSERT DATA TO SELECT ELEMENT.	
+        //alert(value["id"]);		
         var optionClass = "";
         if (visited.includes(value.id)) optionClass = "visited";
-        $('#samples').append('<option value="' + value.id  + '" class="' + optionClass + '">[' + value.id + '] </option>');
+        $('#samples').append('<option value="' + value.id  + '" class="' + optionClass + '">[' + value.id + ' - (R:'+value.rating+')] </option>');
     });
 
     // Initialize Quetion area into question index zero 
@@ -134,19 +144,9 @@ function findout(objArray, key, value, sortByPro) {
 
 //sort by id or rating
 
-function sortBy(prop) {
-    return function (a, b) {
-        var aVal = a[prop];
-        var bVal = b[prop];
-        alert(aVal + " <<" + prop + ">> " + bVal)
-        return ((aVal < bVal) ? -1 : ((aVal > bVal) ? 1 : 0));
-    }
-}
-
 function orderBy(a, b) {
     var prop = $("#sort_by").children("option:selected").val();
-    var aVal = a[prop];
-    var bVal = b[prop];
-    //alert(aVal + " <<" + prop + ">> " + bVal)
-    return ((aVal < bVal) ? -1 : ((aVal > bVal) ? 1 : 0));
+    var sort_type = $("#sort_type").children("option:selected").val();
+    if(sort_type=="asc")  return a[prop]-b[prop];
+    else return b[prop]-a[prop];
 }
